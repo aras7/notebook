@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Notebook by aras7</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1><a href="index.html">Notebook</a></h1>
+          <h2></h2>
+        </header>
+
+        <section class="clearfix">
+          <a href="index.html" class="button">Back to menu</a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+
+          <h3>KMP</h3>
+
+          <a href="http://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm">wikipedia.org</a>
+
+          <pre><code>
+char str[MAX];
+void KMP(int N,char to_search[])
+{
+    int comp[N+7];
+    memset(comp,0,sizeof comp);
+    comp[0] = -1;
+    
+    for(int i = 1;i < N;i++)  
+        for(int x = comp[i];true;)
+            if(to_search[i] != to_search[x])
+            {                 
+                x = comp[x];
+                if(x == -1)
+                {
+                   comp[i+1] = 0;
+                   break;
+                }
+            }
+            else
+            {
+                comp[i+1] = x+1;
+                break;
+            }
+    
+    int _i = 0,i = 0,size = strlen(str);
+        
+    while(i < size)
+    {
+        if(to_search[_i] == str[i])
+        {
+             if(_i == (N-1))
+             {
+                 printf("%d\n",i-N+1);
+                 _i = comp[N];
+             }
+             else 
+                 _i++;
+                      
+             i++;         
+        }
+        else
+        {
+            _i = comp[_i];
+            if(_i == -1)
+                _i++,i++;
+        }
+    }
+}
+          </code></pre>
+
+          <h3>If you need to find 2D strings use this</h3>
+
+          <pre><code>
+bool CMP(pair<int,int> a,pair<int,int> b)
+{
+     return a.first != b.first ? a.first < b.first : a.second < b.second;
+}
+
+vector<int> PRE(vector<char>to_search)
+{
+    int N = to_search.size();
+    vector<int> comp(N + 7,0);
+
+    comp[0] = -1;
+    
+    for(int i = 1;i < N;i++)  
+        for(int x = comp[i];true;)
+            if(to_search[i] != to_search[x])
+            {                 
+                x = comp[x];
+                if(x == -1)
+                {
+                   comp[i+1] = 0;
+                   break;
+                }
+            }
+            else
+            {
+                comp[i+1] = x+1;
+                break;
+            }
+            
+    return comp;
+}
+
+void KMP_2D(vector<vector<char> >to_search , vector<vector<char> >__MAP,int N1,int N2,int M1,int M2)
+{
+     vector<vector<int> > VAL(M1 + 7 , vector<int>(M2 + 7 , 0));
+     
+     vector<pair<int,int> >answer;
+     
+     for(int k = 0;k < N1;k++)
+     {
+         vector<int> comp = PRE(to_search[k]);
+
+         for(int p = M1 - N1 + k;p >= k;p--)
+         {
+             int _i = 0,i = 0,size = __MAP[p].size();
+             
+             vector<char> str = __MAP[p];
+               
+             while(i < size)
+             {
+                 if(to_search[k][_i] == str[i])
+                 {
+                      if(_i == (N2 -1))
+                      {
+                          if(VAL[max(0,p - 1)][i - N2 + 1] == k)
+                          {   
+                              if(k != N1 - 1)
+                                  VAL[p][i - N2 + 1] = k + 1;
+                              else
+                                  answer.push_back(pair<int,int>( p - N1 + 2 , i - N2 + 2 ));
+                          }
+                          
+                          _i = comp[N2 ];
+                     }
+                      else 
+                          _i++;
+                              
+                      i++;         
+                 }
+                 else
+                 {
+                     _i = comp[_i];
+                     if(_i == -1)
+                         _i++,i++;
+                 }
+             }
+         }
+     }
+     
+     sort(answer.begin(),answer.end(),CMP);
+     for(int j = 0;j < answer.size();j++)
+         printf("(%d,%d)\n",answer[j].first,answer[j].second);
+         
+     if(!answer.size())
+         puts("NO MATCH FOUND...");
+}
+
+          </code></pre>
+        </section>
+
+        <footer>
+          Notebook is maintained by <a href="https://github.com/aras7">aras7</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
