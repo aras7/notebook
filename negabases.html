@@ -22,22 +22,47 @@
           <h2></h2>
         </header>
 
+        <section id="downloads" class="clearfix">
+          <a href="index.html" class="button"><span>Back to menu</span></a>
+        </section>
+
         <hr>
 
         <section id="main_content">
-          <h3>What is this?</h3>
 
-          <p>Here you can find some of my algorithms used in programming contests, the MOST of them are based on C++ but the important here is to understand them and use them to solve your own problems regardless the technology, I hope it be usefull for you, enjoy it.</p>
-          <p>If you find something wrong, any comment or improvement  feel free to write me andres.arrieche.7@gmail.com</p>
-          
-          <h3>Table of Content</h3>
-        
-          <ul>
-            <li><a href="bases.html">Bases</a></li>
-            <li><a href="negabases.html">Negative base</a></li>
-          </ul>
+          <h3>To some negative base</h3>
+
+          <pre><code>
+string to_negabase(int num,int base)
+{
+    if(!num)return "0";
+    string neg_bas = "";
+    int x; 
+    while(num)
+    {
+       x = num %-base,num /= -base;
+       if(x < 0)num++,x+= base;
+       neg_bas = char(x+'0') + neg_bas;
+    }
+    return neg_bas;
+}
+          </code></pre>
+
+          <h3>To decimal</h3>
+
+          <pre><code>
+long  to_decimal(string num,int base)
+{
+    long T = 0,i = num.size()-1,exp = 0;
+ 
+    while(i >= 0)
+       T += static_cast<int>(num[i--]-'0')*potencia(-base,exp++);
+ 
+    return T;
+}
+          </code></pre>
+
         </section>
-
 
         <footer>
           Notebook is maintained by <a href="https://github.com/aras7">aras7</a><br>
