@@ -22,31 +22,34 @@
           <h2></h2>
         </header>
 
+        <section id="downloads" class="clearfix">
+          <a href="index.html" class="button"><span>Back to menu</span></a>
+        </section>
+
         <hr>
 
         <section id="main_content">
-          <h3>What is this?</h3>
 
-          <p>Here you can find some of my algorithms used in programming contests, the MOST of them are based on C++ but the important here is to understand them and use them to solve your own problems regardless the technology, I hope it be usefull for you, enjoy it.</p>
-          <p>If you find something wrong, any comment or improvement feel free to write me andres.arrieche.7@gmail.com</p>
-          
-          <h3>Table of Content</h3>
-        
-          <ul>
-            <li><a href="bases.html">Bases</a></li>
-            <li><a href="negabases.html">Negative base</a></li>
-            <li><a href="roman-numbers.html">Roman numbers</a></li>
-            <li><a href="sieve-eratostenes.html">Sieve of eratostenes</a></li>
-            <li><a href="miller-rabin-primality-test.html">Miller Rabin Primality Test</a></li>
-            <li><a href="gcd.html">GCD</a></li>
-            <li><a href="combination.html">Combination</a></li>
-            <li><a href="coins.html">Coin change</a></li>
-            <li><a href=".html"></a></li>
-            <li><a href=".html"></a></li>
-            <li><a href=".html"></a></li>
-          </ul>
+          <h3>Combination</h3>
+
+          <a href="http://mathworld.wolfram.com/Combination.html">wolfram.com</a>
+
+          <pre><code>
+long long Comb(int a,int b)
+{
+     long long total = 1;
+     int i = a,j = 2,limit = a-b;
+     if(b < limit)b = limit,limit = a-b;
+     while(i > b)
+     {
+         total *= i--;
+         while(!(total % j) && j <= limit)total /= j++;
+     }
+     return total;
+}
+          </code></pre>
+
         </section>
-
 
         <footer>
           Notebook is maintained by <a href="https://github.com/aras7">aras7</a><br>
