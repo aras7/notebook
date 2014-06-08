@@ -30,10 +30,9 @@
 
         <section id="main_content">
 
-          <h3>Number of components</h3>
+          <h3>Minimum Spanning Tree</h3>
 
-          <p>With this you can know how many components a graph have</p>
-          <p>For example if a 8 nodes graph has three edges, 1-4 , 2-5 and 4-6 then there are 4 components, (1,4,6), (2,5), (3) and (8)</p>
+          <a href="http://en.wikipedia.org/wiki/Prim%27s_algorithm">wikipedia.org</a>
 
           <pre><code>
 struct Edge;
@@ -57,40 +56,32 @@ struct Edge
      Edge(Node *f,Node *t):from(f),to(t),weight(0){}
      Edge(Node *f,Node *t,int w):from(f),to(t),weight(w){}
 };
-struct Path
-{
-     Node *to;
-     int time;
-     
-     Path(){}
-     Path(Node *t,int x):to(t),time(x){}
-};
+
 class CMP
 {
-      public: bool operator()(Path &a,Path b)
+      public: bool operator()(Edge &a,Edge b)
       {
-          return a.time > b.time;
+          return a.weight > b.weight;
       }
 };
 
-Node *_queue[10000000];
-class Graph
+class Graph_To_Get_Minimum_Spanning_Tree
 {
       vector<Node>vect_nodes;
       
       public :
              
-      Graph(){}
-      Graph(int n)
+      Graph_To_Get_Minimum_Spanning_Tree(){}
+      Graph_To_Get_Minimum_Spanning_Tree(int n)
       {
           vect_nodes.clear();
           vect_nodes = vector<Node>(n);
           for(size_t i = 0;i < vect_nodes.size();vect_nodes[i].ind = i++);
       }
 
-      void Ini()
+      void Ini(int _max)
       {
-          for(size_t i = 0;i < vect_nodes.size();i++)
+          for(size_t i = 0;i < _max;i++)
           {
               vect_nodes[i].ind = i;
               vect_nodes[i].visited = false;
@@ -100,51 +91,48 @@ class Graph
 
       void AddEdge(int f,int t,int w)
       {
-          Edge e(&vect_nodes[f],&vect_nodes[t],w);
+          Edge e[] = { Edge(&vect_nodes[f],&vect_nodes[t],w) , 
+                       Edge(&vect_nodes[t],&vect_nodes[f],w) };
           
-          vect_nodes[f].TO.push_back(e);
+          vect_nodes[f].TO.push_back(e[0]);
+          vect_nodes[t].TO.push_back(e[1]);
       }
 
-      // Number of components
-      int Number_Of_Components(int N)
+      
+      bool Prim_Algorithm(int *answer)
       {
-          int answer = 0;
+          *answer = 0;
           
-          for(int i = 1;i <= N;i++)
-              if(!vect_nodes[i].visited)
-              {
-                  BFS(i,-1);
-                  answer++;
-              }
+          Edge e(&vect_nodes[0],&vect_nodes[0],0);
+          
+          priority_queue<Edge,vector<Edge> ,CMP> p_queue;
+          
+          p_queue.push(e);
+          
+          do
+          {
+              e = p_queue.top();
+              p_queue.pop();
               
-          return answer;
-      }
-      bool BFS(int f, int t)
-      {
-           Node *node;
-           
-           int front = 0,last = 0;
-           
-           _queue[0] = &vect_nodes[f];
-              vect_nodes[f].visited = true;
-           
-           do
-           { 
-                node = _queue[front++];
-                
-                if(node->ind == t)
-                    return true;
-                
-                for(list<Edge>::iterator it = node->TO.begin(); it != node->TO.end();it++)
-                    if(!it->to->visited)
-                    {
-                        _queue[++last] = it->to;
-                        it->to->visited = true;
-                    }
-           }
-           while(front <= last);
-           
-           return false;
+              if(!e.to->visited)
+              {
+                   e.to->visited = true;
+                   
+                   *answer += e.weight;
+                   
+                   for(list<Edge>::iterator it = e.to->TO.begin();it != e.to->TO.end();it++)
+                       p_queue.push(*it);
+              }    
+
+          }
+          while(!p_queue.empty());
+          
+          for(int i = 0,size = vect_nodes.size();i < size;i++)
+              if(!vect_nodes[i].visited)
+                  return false;
+          
+          return true;
+          
       }
 };
           </code></pre>

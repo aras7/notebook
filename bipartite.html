@@ -30,10 +30,9 @@
 
         <section id="main_content">
 
-          <h3>Number of components</h3>
+          <h3>Bipartite</h3>
 
-          <p>With this you can know how many components a graph have</p>
-          <p>For example if a 8 nodes graph has three edges, 1-4 , 2-5 and 4-6 then there are 4 components, (1,4,6), (2,5), (3) and (8)</p>
+          <a href="http://en.wikipedia.org/wiki/Bipartite_graph">wikipedia.org</a>
 
           <pre><code>
 struct Edge;
@@ -41,6 +40,8 @@ struct Node
 {
     int ind;
     bool visited;
+
+    int mark;
     
     list<Edge>TO;
     
@@ -105,20 +106,13 @@ class Graph
           vect_nodes[f].TO.push_back(e);
       }
 
-      // Number of components
-      int Number_Of_Components(int N)
+      //n -> columns
+      int POS(int i,int j,int n)
       {
-          int answer = 0;
-          
-          for(int i = 1;i <= N;i++)
-              if(!vect_nodes[i].visited)
-              {
-                  BFS(i,-1);
-                  answer++;
-              }
-              
-          return answer;
+           return (i-1) * n + j - 1;
       }
+      BFS
+
       bool BFS(int f, int t)
       {
            Node *node;
@@ -146,6 +140,38 @@ class Graph
            
            return false;
       }
+
+      // Bipartite
+      // Every node has to have 'mark' as an attribute which value can be // 0(none), 1(type 1) , -1(type 2)
+      bool isBipartiete()
+      {
+           bool bipartiete = true;
+           
+           for(int i = 1,size = vect_nodes.size();bipartiete && i < size;i++)
+               if(!vect_nodes[i].visited)                     
+                   bipartiete &= BFS_To_Bipartite(i,1); 
+           
+           return bipartiete;
+      }
+
+      bool BFS_To_Bipartite(int p,int val_mark)
+      {
+           if(!vect_nodes[p].visited)
+           {
+               bool bipartite = true;
+           
+               vect_nodes[p].mark = val_mark;
+               vect_nodes[p].visited = true;
+               
+               for(list<Edge>::iterator it = vect_nodes[p].TO.begin();bipartite && it != vect_nodes[p].TO.end();it++)
+                    bipartite &= BFS_To_Bipartite(it->to->ind , (val_mark == 1 ? -1 : 1));
+
+               return bipartite;
+           }
+           else
+               return vect_nodes[p].mark == val_mark;
+      }
+
 };
           </code></pre>
 
