@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Notebook by aras7</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1><a href="index.html">Notebook</a></h1>
+          <h2></h2>
+        </header>
+
+        <section class="clearfix">
+          <a href="index.html" class="button">Back to menu</a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+
+          <h3>Date handler</h3>
+
+          <p>Some languages like python or java(available on most of acm contest) have implementations of this algorithms but if you want to use C/C++ you must implement them by yourself.</p>
+          <p>I DO NOT like to depend on technologies so I did it by myself, besides I think that we(ALL PROGRAMMERS) MUST understand an algorithm and know its implementation before use a generic library</p>
+
+          <pre><code>
+struct Date
+{
+       int d,m,y;
+       
+       Date(){}
+       Date(int _d,int _m,int _y): y(_y), d(_d), m(_m) {}
+       Date(int _d,char _m[],int _y):y(_y), d(_d), m(numberOfMonth(_m)) {}
+       
+       int numberOfMonth(char s[])
+       {
+           if(strcmp(s,"January") == 0) return 1;
+           if(strcmp(s,"February") == 0) return 2;
+           if(strcmp(s,"March") == 0) return 3;
+           if(strcmp(s,"April") == 0) return 4;
+           if(strcmp(s,"May") == 0) return 5;
+           if(strcmp(s,"June") == 0) return 6;
+           if(strcmp(s,"July") == 0) return 7;
+           if(strcmp(s,"August") == 0) return 8;
+           if(strcmp(s,"September") == 0) return 9;
+           if(strcmp(s,"October") == 0) return 10;
+           if(strcmp(s,"November") == 0) return 11;
+           if(strcmp(s,"December") == 0) return 12;
+           
+           return 0;
+       }
+
+       bool isLeapYear()
+       {    
+            if(!(y%100))return !(y%400);
+            
+            return !(y%4);
+       }
+       
+       bool operator <(Date obj)
+       {
+            if(y != obj.y) return y < obj.y;
+            
+            if(m != obj.m) return m < obj.m;
+            
+            return d < obj.d;
+       }
+       bool operator >(Date obj)
+       {
+            if(y != obj.y) return y > obj.y;
+
+            if(m != obj.m) return m > obj.m;
+
+            return d > obj.d;
+       }
+       
+       bool operator ==(Date obj)
+       {
+            return y == obj.y && m == obj.m && d == obj.d;
+       }
+       
+       bool operator <=(Date obj)
+       {
+            if(y != obj.y) return y <= obj.y;
+            
+            if(m != obj.m) return m <= obj.m;
+            
+            return d <= obj.d;
+       }
+       bool operator >=(Date obj)
+       {
+            if(y != obj.y) return y >= obj.y;
+            
+            if(m != obj.m) return m >= obj.m;
+            
+            return d >= obj.d;
+       }
+};
+          </code></pre>
+
+          <h3>Number of leap years between two dates</h3>
+          <pre><code>
+int numbersOfLeapYears(Date dates[2])
+{
+     if(dates[1] < dates[0])
+         swap(dates[0],dates[1]);
+     
+     // first leap year >= dates[0]
+     {    
+         if(dates[0] > Date(29,2,dates[0].y))
+             dates[0].y++;
+            
+         dates[0].d = 29;
+         dates[0].m = 2;
+                
+         while(!dates[0].isLeapYear())
+             dates[0].y++;
+     }
+     
+     // first leap year <= dates[1]
+     {
+         if(dates[1] < Date(29,2,dates[1].y))
+             dates[1].y--;
+                
+         dates[1].d = 29;
+         dates[1].m = 2;
+            
+         while(!dates[1].isLeapYear())
+                dates[1].y--;
+     }
+        
+     if(dates[0] < dates[1])
+         return 1 + ((dates[1].y - dates[0].y)/4) - ( (dates[1].y/100 - dates[1].y/400) - (dates[0].y/100 - dates[0].y/400) );
+     
+     if(dates[0] == dates[1])
+         return 1;
+     
+     return 0;
+}
+          </pre></code>
+
+          <h3>Find day(Monday, Tuesday, ..) need day, month and year</h3>
+
+          <pre><code>
+char *days[] = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+int d,m,y,x;
+
+scanf("%d%d%d",&d,&m,&y); // day, month and year
+        
+x = ((14 - m) / 12);
+y = y - x;
+m = m + 12 * x - 2;
+
+printf("%s\n",days[(d + y + y/4 - y/100 + y/400 + (31*m)/12) % 7 ] );
+          </code></pre>
+
+        </section>
+
+        <footer>
+          Notebook is maintained by <a href="https://github.com/aras7">aras7</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
