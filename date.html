@@ -7,6 +7,11 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/shi_whatis.min.css" rel='stylesheet' type='text/css'/>
+
+    <script src="javascripts/jquery-2.1.1.min.js"></script>
+    <script src="javascripts/shi_jquery.min.js"></script>
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -35,6 +40,88 @@
           <p>Some languages like python or java(available on most of acm contest) have implementations of this algorithms but if you want to use C/C++ you must implement them by yourself.</p>
           <p>I DO NOT like to depend on technologies so I did it by myself, besides I think that we(ALL PROGRAMMERS) MUST understand an algorithm and know its implementation before use a generic library</p>
 
+<!-- start code -->
+<div class="snippet-container">
+   <div class="sh_whatis snippet-wrap">
+      <div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div>
+      <pre class="shi_pre sh_cpp snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_keyword">struct</span><span class="sh_normal"> </span><span class="sh_classname">Date</span></li><li><span class="sh_cbracket">{</span></li><li>       <span class="sh_type">int</span> d<span class="sh_symbol">,</span>m<span class="sh_symbol">,</span>y<span class="sh_symbol">;</span></li><li>       </li><li>       <span class="sh_function">Date</span><span class="sh_symbol">()</span><span class="sh_cbracket">{}</span></li><li>       <span class="sh_function">Date</span><span class="sh_symbol">(</span><span class="sh_type">int</span> _d<span class="sh_symbol">,</span><span class="sh_type">int</span> _m<span class="sh_symbol">,</span><span class="sh_type">int</span> _y<span class="sh_symbol">):</span> <span class="sh_function">y</span><span class="sh_symbol">(</span>_y<span class="sh_symbol">),</span> <span class="sh_function">d</span><span class="sh_symbol">(</span>_d<span class="sh_symbol">),</span> <span class="sh_function">m</span><span class="sh_symbol">(</span>_m<span class="sh_symbol">)</span> <span class="sh_cbracket">{}</span></li><li>       <span class="sh_function">Date</span><span class="sh_symbol">(</span><span class="sh_type">int</span> _d<span class="sh_symbol">,</span><span class="sh_type">char</span> _m<span class="sh_symbol">[],</span><span class="sh_type">int</span> _y<span class="sh_symbol">):</span><span class="sh_function">y</span><span class="sh_symbol">(</span>_y<span class="sh_symbol">),</span> <span class="sh_function">d</span><span class="sh_symbol">(</span>_d<span class="sh_symbol">),</span> <span class="sh_function">m</span><span class="sh_symbol">(</span><span class="sh_function">numberOfMonth</span><span class="sh_symbol">(</span>_m<span class="sh_symbol">))</span> <span class="sh_cbracket">{}</span></li><li>       </li><li>       <span class="sh_type">int</span> <span class="sh_function">numberOfMonth</span><span class="sh_symbol">(</span><span class="sh_type">char</span> s<span class="sh_symbol">[])</span></li><li>       <span class="sh_cbracket">{</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"January"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">1</span><span class="sh_symbol">;</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"February"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">2</span><span class="sh_symbol">;</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"March"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">3</span><span class="sh_symbol">;</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"April"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">4</span><span class="sh_symbol">;</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"May"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">5</span><span class="sh_symbol">;</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"June"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">6</span><span class="sh_symbol">;</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"July"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">7</span><span class="sh_symbol">;</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"August"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">8</span><span class="sh_symbol">;</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"September"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">9</span><span class="sh_symbol">;</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"October"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">10</span><span class="sh_symbol">;</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"November"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">11</span><span class="sh_symbol">;</span></li><li>           <span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_function">strcmp</span><span class="sh_symbol">(</span>s<span class="sh_symbol">,</span><span class="sh_string">"December"</span><span class="sh_symbol">)</span> <span class="sh_symbol">==</span> <span class="sh_number">0</span><span class="sh_symbol">)</span> <span class="sh_keyword">return</span> <span class="sh_number">12</span><span class="sh_symbol">;</span></li><li>           </li><li>           <span class="sh_keyword">return</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>       <span class="sh_cbracket">}</span></li><li></li><li>       <span class="sh_type">bool</span> <span class="sh_function">isLeapYear</span><span class="sh_symbol">()</span></li><li>       <span class="sh_cbracket">{</span>    </li><li>            <span class="sh_keyword">if</span><span class="sh_symbol">(!(</span>y<span class="sh_symbol">%</span><span class="sh_number">100</span><span class="sh_symbol">))</span><span class="sh_keyword">return</span> <span class="sh_symbol">!(</span>y<span class="sh_symbol">%</span><span class="sh_number">400</span><span class="sh_symbol">);</span></li><li>            </li><li>            <span class="sh_keyword">return</span> <span class="sh_symbol">!(</span>y<span class="sh_symbol">%</span><span class="sh_number">4</span><span class="sh_symbol">);</span></li><li>       <span class="sh_cbracket">}</span></li><li>       </li><li>       <span class="sh_type">bool</span> <span class="sh_keyword">operator</span> <span class="sh_symbol">&lt;(</span><span class="sh_usertype">Date</span><span class="sh_normal"> </span>obj<span class="sh_symbol">)</span></li><li>       <span class="sh_cbracket">{</span></li><li>            <span class="sh_keyword">if</span><span class="sh_symbol">(</span>y <span class="sh_symbol">!=</span> obj<span class="sh_symbol">.</span>y<span class="sh_symbol">)</span> <span class="sh_keyword">return</span> y <span class="sh_symbol">&lt;</span> obj<span class="sh_symbol">.</span>y<span class="sh_symbol">;</span></li><li>            </li><li>            <span class="sh_keyword">if</span><span class="sh_symbol">(</span>m <span class="sh_symbol">!=</span> obj<span class="sh_symbol">.</span>m<span class="sh_symbol">)</span> <span class="sh_keyword">return</span> m <span class="sh_symbol">&lt;</span> obj<span class="sh_symbol">.</span>m<span class="sh_symbol">;</span></li><li>            </li><li>            <span class="sh_keyword">return</span> d <span class="sh_symbol">&lt;</span> obj<span class="sh_symbol">.</span>d<span class="sh_symbol">;</span></li><li>       <span class="sh_cbracket">}</span></li><li>       <span class="sh_type">bool</span> <span class="sh_keyword">operator</span> <span class="sh_symbol">&gt;(</span><span class="sh_usertype">Date</span><span class="sh_normal"> </span>obj<span class="sh_symbol">)</span></li><li>       <span class="sh_cbracket">{</span></li><li>            <span class="sh_keyword">if</span><span class="sh_symbol">(</span>y <span class="sh_symbol">!=</span> obj<span class="sh_symbol">.</span>y<span class="sh_symbol">)</span> <span class="sh_keyword">return</span> y <span class="sh_symbol">&gt;</span> obj<span class="sh_symbol">.</span>y<span class="sh_symbol">;</span></li><li></li><li>            <span class="sh_keyword">if</span><span class="sh_symbol">(</span>m <span class="sh_symbol">!=</span> obj<span class="sh_symbol">.</span>m<span class="sh_symbol">)</span> <span class="sh_keyword">return</span> m <span class="sh_symbol">&gt;</span> obj<span class="sh_symbol">.</span>m<span class="sh_symbol">;</span></li><li></li><li>            <span class="sh_keyword">return</span> d <span class="sh_symbol">&gt;</span> obj<span class="sh_symbol">.</span>d<span class="sh_symbol">;</span></li><li>       <span class="sh_cbracket">}</span></li><li>       </li><li>       <span class="sh_type">bool</span> <span class="sh_keyword">operator</span> <span class="sh_symbol">==(</span><span class="sh_usertype">Date</span><span class="sh_normal"> </span>obj<span class="sh_symbol">)</span></li><li>       <span class="sh_cbracket">{</span></li><li>            <span class="sh_keyword">return</span> y <span class="sh_symbol">==</span> obj<span class="sh_symbol">.</span>y <span class="sh_symbol">&amp;&amp;</span> m <span class="sh_symbol">==</span> obj<span class="sh_symbol">.</span>m <span class="sh_symbol">&amp;&amp;</span> d <span class="sh_symbol">==</span> obj<span class="sh_symbol">.</span>d<span class="sh_symbol">;</span></li><li>       <span class="sh_cbracket">}</span></li><li>       </li><li>       <span class="sh_type">bool</span> <span class="sh_keyword">operator</span> <span class="sh_symbol">&lt;=(</span><span class="sh_usertype">Date</span><span class="sh_normal"> </span>obj<span class="sh_symbol">)</span></li><li>       <span class="sh_cbracket">{</span></li><li>            <span class="sh_keyword">if</span><span class="sh_symbol">(</span>y <span class="sh_symbol">!=</span> obj<span class="sh_symbol">.</span>y<span class="sh_symbol">)</span> <span class="sh_keyword">return</span> y <span class="sh_symbol">&lt;=</span> obj<span class="sh_symbol">.</span>y<span class="sh_symbol">;</span></li><li>            </li><li>            <span class="sh_keyword">if</span><span class="sh_symbol">(</span>m <span class="sh_symbol">!=</span> obj<span class="sh_symbol">.</span>m<span class="sh_symbol">)</span> <span class="sh_keyword">return</span> m <span class="sh_symbol">&lt;=</span> obj<span class="sh_symbol">.</span>m<span class="sh_symbol">;</span></li><li>            </li><li>            <span class="sh_keyword">return</span> d <span class="sh_symbol">&lt;=</span> obj<span class="sh_symbol">.</span>d<span class="sh_symbol">;</span></li><li>       <span class="sh_cbracket">}</span></li><li>       <span class="sh_type">bool</span> <span class="sh_keyword">operator</span> <span class="sh_symbol">&gt;=(</span><span class="sh_usertype">Date</span><span class="sh_normal"> </span>obj<span class="sh_symbol">)</span></li><li>       <span class="sh_cbracket">{</span></li><li>            <span class="sh_keyword">if</span><span class="sh_symbol">(</span>y <span class="sh_symbol">!=</span> obj<span class="sh_symbol">.</span>y<span class="sh_symbol">)</span> <span class="sh_keyword">return</span> y <span class="sh_symbol">&gt;=</span> obj<span class="sh_symbol">.</span>y<span class="sh_symbol">;</span></li><li>            </li><li>            <span class="sh_keyword">if</span><span class="sh_symbol">(</span>m <span class="sh_symbol">!=</span> obj<span class="sh_symbol">.</span>m<span class="sh_symbol">)</span> <span class="sh_keyword">return</span> m <span class="sh_symbol">&gt;=</span> obj<span class="sh_symbol">.</span>m<span class="sh_symbol">;</span></li><li>            </li><li>            <span class="sh_keyword">return</span> d <span class="sh_symbol">&gt;=</span> obj<span class="sh_symbol">.</span>d<span class="sh_symbol">;</span></li><li>       <span class="sh_cbracket">}</span></li><li><span class="sh_cbracket">}</span><span class="sh_symbol">;</span></li></ol></pre>
+      <pre class="snippet-textonly sh_sourceCode" style="display:none;" tabindex="0" contenteditable="">struct Date
+{
+       int d,m,y;
+       
+       Date(){}
+       Date(int _d,int _m,int _y): y(_y), d(_d), m(_m) {}
+       Date(int _d,char _m[],int _y):y(_y), d(_d), m(numberOfMonth(_m)) {}
+       
+       int numberOfMonth(char s[])
+       {
+           if(strcmp(s,"January") == 0) return 1;
+           if(strcmp(s,"February") == 0) return 2;
+           if(strcmp(s,"March") == 0) return 3;
+           if(strcmp(s,"April") == 0) return 4;
+           if(strcmp(s,"May") == 0) return 5;
+           if(strcmp(s,"June") == 0) return 6;
+           if(strcmp(s,"July") == 0) return 7;
+           if(strcmp(s,"August") == 0) return 8;
+           if(strcmp(s,"September") == 0) return 9;
+           if(strcmp(s,"October") == 0) return 10;
+           if(strcmp(s,"November") == 0) return 11;
+           if(strcmp(s,"December") == 0) return 12;
+           
+           return 0;
+       }
+
+       bool isLeapYear()
+       {    
+            if(!(y%100))return !(y%400);
+            
+            return !(y%4);
+       }
+       
+       bool operator &lt;(Date obj)
+       {
+            if(y != obj.y) return y &lt; obj.y;
+            
+            if(m != obj.m) return m &lt; obj.m;
+            
+            return d &lt; obj.d;
+       }
+       bool operator &gt;(Date obj)
+       {
+            if(y != obj.y) return y &gt; obj.y;
+
+            if(m != obj.m) return m &gt; obj.m;
+
+            return d &gt; obj.d;
+       }
+       
+       bool operator ==(Date obj)
+       {
+            return y == obj.y &amp;&amp; m == obj.m &amp;&amp; d == obj.d;
+       }
+       
+       bool operator &lt;=(Date obj)
+       {
+            if(y != obj.y) return y &lt;= obj.y;
+            
+            if(m != obj.m) return m &lt;= obj.m;
+            
+            return d &lt;= obj.d;
+       }
+       bool operator &gt;=(Date obj)
+       {
+            if(y != obj.y) return y &gt;= obj.y;
+            
+            if(m != obj.m) return m &gt;= obj.m;
+            
+            return d &gt;= obj.d;
+       }
+};</pre>
+   </div>
+</div>
+<!-- end code -->
+
+<!--
           <pre><code>
 struct Date
 {
@@ -109,8 +196,57 @@ struct Date
        }
 };
           </code></pre>
+-->
 
           <h3>Number of leap years between two dates</h3>
+
+<!-- start code -->
+<div class="snippet-container">
+   <div class="sh_whatis snippet-wrap">
+      <div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div>
+      <pre class="shi_pre sh_cpp snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_type">int</span> <span class="sh_function">numbersOfLeapYears</span><span class="sh_symbol">(</span><span class="sh_usertype">Date</span><span class="sh_normal"> </span>dates<span class="sh_symbol">[</span><span class="sh_number">2</span><span class="sh_symbol">])</span></li><li><span class="sh_cbracket">{</span></li><li>     <span class="sh_keyword">if</span><span class="sh_symbol">(</span>dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">]</span> <span class="sh_symbol">&lt;</span> dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">])</span></li><li>         <span class="sh_function">swap</span><span class="sh_symbol">(</span>dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">],</span>dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">]);</span></li><li>     </li><li>     <span class="sh_comment">// first leap year &gt;= dates[0]</span></li><li>     <span class="sh_cbracket">{</span>    </li><li>         <span class="sh_keyword">if</span><span class="sh_symbol">(</span>dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">]</span> <span class="sh_symbol">&gt;</span> <span class="sh_function">Date</span><span class="sh_symbol">(</span><span class="sh_number">29</span><span class="sh_symbol">,</span><span class="sh_number">2</span><span class="sh_symbol">,</span>dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">].</span>y<span class="sh_symbol">))</span></li><li>             dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">].</span>y<span class="sh_symbol">++;</span></li><li>            </li><li>         dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">].</span>d <span class="sh_symbol">=</span> <span class="sh_number">29</span><span class="sh_symbol">;</span></li><li>         dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">].</span>m <span class="sh_symbol">=</span> <span class="sh_number">2</span><span class="sh_symbol">;</span></li><li>                </li><li>         <span class="sh_keyword">while</span><span class="sh_symbol">(!</span>dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">].</span><span class="sh_function">isLeapYear</span><span class="sh_symbol">())</span></li><li>             dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">].</span>y<span class="sh_symbol">++;</span></li><li>     <span class="sh_cbracket">}</span></li><li>     </li><li>     <span class="sh_comment">// first leap year &lt;= dates[1]</span></li><li>     <span class="sh_cbracket">{</span></li><li>         <span class="sh_keyword">if</span><span class="sh_symbol">(</span>dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">]</span> <span class="sh_symbol">&lt;</span> <span class="sh_function">Date</span><span class="sh_symbol">(</span><span class="sh_number">29</span><span class="sh_symbol">,</span><span class="sh_number">2</span><span class="sh_symbol">,</span>dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">].</span>y<span class="sh_symbol">))</span></li><li>             dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">].</span>y<span class="sh_symbol">--;</span></li><li>                </li><li>         dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">].</span>d <span class="sh_symbol">=</span> <span class="sh_number">29</span><span class="sh_symbol">;</span></li><li>         dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">].</span>m <span class="sh_symbol">=</span> <span class="sh_number">2</span><span class="sh_symbol">;</span></li><li>            </li><li>         <span class="sh_keyword">while</span><span class="sh_symbol">(!</span>dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">].</span><span class="sh_function">isLeapYear</span><span class="sh_symbol">())</span></li><li>                dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">].</span>y<span class="sh_symbol">--;</span></li><li>     <span class="sh_cbracket">}</span></li><li>        </li><li>     <span class="sh_keyword">if</span><span class="sh_symbol">(</span>dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">]</span> <span class="sh_symbol">&lt;</span> dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">])</span></li><li>         <span class="sh_keyword">return</span> <span class="sh_number">1</span> <span class="sh_symbol">+</span> <span class="sh_symbol">((</span>dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">].</span>y <span class="sh_symbol">-</span> dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">].</span>y<span class="sh_symbol">)/</span><span class="sh_number">4</span><span class="sh_symbol">)</span> <span class="sh_symbol">-</span> <span class="sh_symbol">(</span> <span class="sh_symbol">(</span>dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">].</span>y<span class="sh_symbol">/</span><span class="sh_number">100</span> <span class="sh_symbol">-</span> dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">].</span>y<span class="sh_symbol">/</span><span class="sh_number">400</span><span class="sh_symbol">)</span> <span class="sh_symbol">-</span> <span class="sh_symbol">(</span>dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">].</span>y<span class="sh_symbol">/</span><span class="sh_number">100</span> <span class="sh_symbol">-</span> dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">].</span>y<span class="sh_symbol">/</span><span class="sh_number">400</span><span class="sh_symbol">)</span> <span class="sh_symbol">);</span></li><li>     </li><li>     <span class="sh_keyword">if</span><span class="sh_symbol">(</span>dates<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">]</span> <span class="sh_symbol">==</span> dates<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">])</span></li><li>         <span class="sh_keyword">return</span> <span class="sh_number">1</span><span class="sh_symbol">;</span></li><li>     </li><li>     <span class="sh_keyword">return</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre>
+      <pre class="snippet-textonly sh_sourceCode" style="display:none;" tabindex="0" contenteditable="">int numbersOfLeapYears(Date dates[2])
+{
+     if(dates[1] &lt; dates[0])
+         swap(dates[0],dates[1]);
+     
+     // first leap year &gt;= dates[0]
+     {    
+         if(dates[0] &gt; Date(29,2,dates[0].y))
+             dates[0].y++;
+            
+         dates[0].d = 29;
+         dates[0].m = 2;
+                
+         while(!dates[0].isLeapYear())
+             dates[0].y++;
+     }
+     
+     // first leap year &lt;= dates[1]
+     {
+         if(dates[1] &lt; Date(29,2,dates[1].y))
+             dates[1].y--;
+                
+         dates[1].d = 29;
+         dates[1].m = 2;
+            
+         while(!dates[1].isLeapYear())
+                dates[1].y--;
+     }
+        
+     if(dates[0] &lt; dates[1])
+         return 1 + ((dates[1].y - dates[0].y)/4) - ( (dates[1].y/100 - dates[1].y/400) - (dates[0].y/100 - dates[0].y/400) );
+     
+     if(dates[0] == dates[1])
+         return 1;
+     
+     return 0;
+}</pre>
+   </div>
+</div>
+<!-- end code -->
+
+<!--
           <pre><code>
 int numbersOfLeapYears(Date dates[2])
 {
@@ -150,9 +286,27 @@ int numbersOfLeapYears(Date dates[2])
      return 0;
 }
           </pre></code>
-
+-->
           <h3>Find day(Monday, Tuesday, ..) need day, month and year</h3>
+<!-- start code -->
+<div class="snippet-container">
+   <div class="sh_whatis snippet-wrap">
+      <div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div>
+      <pre class="shi_pre sh_cpp snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_type">char</span> <span class="sh_symbol">*</span>days<span class="sh_symbol">[]</span> <span class="sh_symbol">=</span> <span class="sh_cbracket">{</span><span class="sh_string">"Sunday"</span><span class="sh_symbol">,</span><span class="sh_string">"Monday"</span><span class="sh_symbol">,</span><span class="sh_string">"Tuesday"</span><span class="sh_symbol">,</span><span class="sh_string">"Wednesday"</span><span class="sh_symbol">,</span><span class="sh_string">"Thursday"</span><span class="sh_symbol">,</span><span class="sh_string">"Friday"</span><span class="sh_symbol">,</span><span class="sh_string">"Saturday"</span><span class="sh_cbracket">}</span><span class="sh_symbol">;</span></li><li><span class="sh_type">int</span> d<span class="sh_symbol">,</span>m<span class="sh_symbol">,</span>y<span class="sh_symbol">,</span>x<span class="sh_symbol">;</span></li><li></li><li><span class="sh_function">scanf</span><span class="sh_symbol">(</span><span class="sh_string">"%d%d%d"</span><span class="sh_symbol">,&amp;</span>d<span class="sh_symbol">,&amp;</span>m<span class="sh_symbol">,&amp;</span>y<span class="sh_symbol">);</span> <span class="sh_comment">// day, month and year</span></li><li>        </li><li>x <span class="sh_symbol">=</span> <span class="sh_symbol">((</span><span class="sh_number">14</span> <span class="sh_symbol">-</span> m<span class="sh_symbol">)</span> <span class="sh_symbol">/</span> <span class="sh_number">12</span><span class="sh_symbol">);</span></li><li>y <span class="sh_symbol">=</span> y <span class="sh_symbol">-</span> x<span class="sh_symbol">;</span></li><li>m <span class="sh_symbol">=</span> m <span class="sh_symbol">+</span> <span class="sh_number">12</span> <span class="sh_symbol">*</span> x <span class="sh_symbol">-</span> <span class="sh_number">2</span><span class="sh_symbol">;</span></li><li></li><li><span class="sh_function">printf</span><span class="sh_symbol">(</span><span class="sh_string">"%s</span><span class="sh_specialchar">\n</span><span class="sh_string">"</span><span class="sh_symbol">,</span>days<span class="sh_symbol">[(</span>d <span class="sh_symbol">+</span> y <span class="sh_symbol">+</span> y<span class="sh_symbol">/</span><span class="sh_number">4</span> <span class="sh_symbol">-</span> y<span class="sh_symbol">/</span><span class="sh_number">100</span> <span class="sh_symbol">+</span> y<span class="sh_symbol">/</span><span class="sh_number">400</span> <span class="sh_symbol">+</span> <span class="sh_symbol">(</span><span class="sh_number">31</span><span class="sh_symbol">*</span>m<span class="sh_symbol">)/</span><span class="sh_number">12</span><span class="sh_symbol">)</span> <span class="sh_symbol">%</span> <span class="sh_number">7</span> <span class="sh_symbol">]</span> <span class="sh_symbol">);</span></li></ol></pre>
+      <pre class="snippet-textonly sh_sourceCode" style="display:none;" tabindex="0" contenteditable="">char *days[] = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+int d,m,y,x;
 
+scanf("%d%d%d",&amp;d,&amp;m,&amp;y); // day, month and year
+        
+x = ((14 - m) / 12);
+y = y - x;
+m = m + 12 * x - 2;
+
+printf("%s\n",days[(d + y + y/4 - y/100 + y/400 + (31*m)/12) % 7 ] );</pre>
+   </div>
+</div>
+<!-- end code -->
+<!--
           <pre><code>
 char *days[] = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 int d,m,y,x;
@@ -165,14 +319,17 @@ m = m + 12 * x - 2;
 
 printf("%s\n",days[(d + y + y/4 - y/100 + y/400 + (31*m)/12) % 7 ] );
           </code></pre>
-
+-->
         </section>
 
         <footer>
           Notebook is maintained by <a href="https://github.com/aras7">aras7</a><br>
+          <a target="blank"href="http://stackoverflow.com/users/1437986/andres">
+          <img src="http://stackoverflow.com/users/flair/1437986.png" width="208" height="58" alt="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+          </a>
+          <br>
           This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
+        </footer> 
         
       </div>
     </div>

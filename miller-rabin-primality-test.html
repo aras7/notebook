@@ -7,6 +7,11 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/shi_whatis.min.css" rel='stylesheet' type='text/css'/>
+
+    <script src="javascripts/jquery-2.1.1.min.js"></script>
+    <script src="javascripts/shi_jquery.min.js"></script>
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -34,6 +39,85 @@
 
           <p>N_Test  is the precision, higher -> answer is more precise  but program is slower, keep a balance</p>
 
+<!-- start code -->
+<div class="snippet-container">
+   <div class="sh_whatis snippet-wrap">
+      <div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div>
+      <pre class="shi_pre sh_cpp snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_preproc">#define</span> <span class="sh_function">N_Test</span> <span class="sh_symbol">(</span><span class="sh_number">100</span><span class="sh_symbol">)</span></li><li></li><li><span class="sh_type">long</span> <span class="sh_type">long</span> <span class="sh_function">MultiplyMod</span><span class="sh_symbol">(</span><span class="sh_type">long</span> <span class="sh_type">long</span> A<span class="sh_symbol">,</span><span class="sh_type">long</span> <span class="sh_type">long</span> B<span class="sh_symbol">,</span><span class="sh_type">long</span> <span class="sh_type">long</span> MOD<span class="sh_symbol">)</span></li><li><span class="sh_cbracket">{</span></li><li></li><li>    <span class="sh_comment">// return A * B % MOD; if A &lt;= 2^32</span></li><li></li><li>    <span class="sh_keyword">if</span><span class="sh_symbol">(!</span>A <span class="sh_symbol">||</span> <span class="sh_symbol">!</span>B<span class="sh_symbol">)</span><span class="sh_keyword">return</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li>    </li><li>    <span class="sh_type">long</span> <span class="sh_type">long</span> x <span class="sh_symbol">=</span> <span class="sh_number">0</span><span class="sh_symbol">,</span>y <span class="sh_symbol">=</span> A <span class="sh_symbol">%=</span> MOD<span class="sh_symbol">;</span></li><li>    B <span class="sh_symbol">%=</span> MOD<span class="sh_symbol">;</span></li><li>    </li><li>    <span class="sh_keyword">while</span><span class="sh_symbol">(</span>B<span class="sh_symbol">)</span></li><li>    <span class="sh_cbracket">{</span></li><li>       <span class="sh_keyword">if</span><span class="sh_symbol">(</span>B <span class="sh_symbol">%</span> <span class="sh_number">2</span><span class="sh_symbol">)</span></li><li>          x <span class="sh_symbol">=</span> <span class="sh_symbol">(</span>x <span class="sh_symbol">+</span> y<span class="sh_symbol">)</span> <span class="sh_symbol">%</span> MOD<span class="sh_symbol">;</span></li><li>       y <span class="sh_symbol">=</span> <span class="sh_symbol">(</span>y <span class="sh_symbol">+</span> y<span class="sh_symbol">)</span> <span class="sh_symbol">%</span> MOD<span class="sh_symbol">;</span></li><li>       B <span class="sh_symbol">/=</span> <span class="sh_number">2</span><span class="sh_symbol">;</span> </li><li>    <span class="sh_cbracket">}</span></li><li>    </li><li>    <span class="sh_keyword">return</span> x <span class="sh_symbol">%</span> MOD<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span> </li><li></li><li><span class="sh_type">long</span> <span class="sh_type">long</span> <span class="sh_function">PowMod</span><span class="sh_symbol">(</span><span class="sh_type">long</span> <span class="sh_type">long</span> base<span class="sh_symbol">,</span><span class="sh_type">long</span> <span class="sh_type">long</span> exp<span class="sh_symbol">,</span><span class="sh_type">long</span> <span class="sh_type">long</span> mod<span class="sh_symbol">)</span></li><li><span class="sh_cbracket">{</span></li><li>    <span class="sh_type">long</span> <span class="sh_type">long</span> x <span class="sh_symbol">=</span> <span class="sh_number">1</span><span class="sh_symbol">,</span>y <span class="sh_symbol">=</span> base<span class="sh_symbol">;</span></li><li>    </li><li>    <span class="sh_keyword">while</span><span class="sh_symbol">(</span>exp<span class="sh_symbol">)</span></li><li>    <span class="sh_cbracket">{</span> </li><li>        <span class="sh_keyword">if</span><span class="sh_symbol">(</span>exp <span class="sh_symbol">%</span> <span class="sh_number">2</span><span class="sh_symbol">)</span></li><li>            x <span class="sh_symbol">=</span> <span class="sh_function">MultiplyMod</span><span class="sh_symbol">(</span>y<span class="sh_symbol">,</span>x<span class="sh_symbol">,</span>mod<span class="sh_symbol">);</span></li><li>            </li><li>        y <span class="sh_symbol">=</span> <span class="sh_function">MultiplyMod</span><span class="sh_symbol">(</span>y<span class="sh_symbol">,</span>y<span class="sh_symbol">,</span>mod<span class="sh_symbol">);</span></li><li>        </li><li>        exp <span class="sh_symbol">/=</span> <span class="sh_number">2</span><span class="sh_symbol">;</span></li><li>    <span class="sh_cbracket">}</span></li><li>    </li><li>    <span class="sh_keyword">return</span> x <span class="sh_symbol">%</span> mod<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li></li><li><span class="sh_type">bool</span> <span class="sh_function">MillerRabinPrimalityTest</span><span class="sh_symbol">(</span><span class="sh_type">long</span> <span class="sh_type">long</span> N<span class="sh_symbol">)</span></li><li><span class="sh_cbracket">{</span></li><li>    <span class="sh_keyword">if</span><span class="sh_symbol">(</span>N <span class="sh_symbol">==</span> <span class="sh_number">2</span><span class="sh_symbol">)</span><span class="sh_keyword">return</span> <span class="sh_keyword">true</span><span class="sh_symbol">;</span></li><li>    </li><li>    <span class="sh_keyword">if</span><span class="sh_symbol">(!(</span>N <span class="sh_symbol">%</span> <span class="sh_number">2</span><span class="sh_symbol">)</span> <span class="sh_symbol">||</span> N <span class="sh_symbol">&lt;</span> <span class="sh_number">2</span><span class="sh_symbol">)</span><span class="sh_keyword">return</span> <span class="sh_keyword">false</span><span class="sh_symbol">;</span></li><li> </li><li>    <span class="sh_type">long</span> <span class="sh_type">long</span> a<span class="sh_symbol">,</span>temp<span class="sh_symbol">,</span>x<span class="sh_symbol">,</span>d<span class="sh_symbol">=</span>N<span class="sh_number">-1</span><span class="sh_symbol">;</span></li><li>    </li><li>    <span class="sh_keyword">while</span><span class="sh_symbol">(!(</span>d <span class="sh_symbol">%</span> <span class="sh_number">2</span><span class="sh_symbol">))</span></li><li>        d <span class="sh_symbol">/=</span> <span class="sh_number">2</span><span class="sh_symbol">;</span></li><li>        </li><li>    <span class="sh_keyword">for</span><span class="sh_symbol">(</span><span class="sh_type">int</span> _i <span class="sh_symbol">=</span> <span class="sh_number">0</span><span class="sh_symbol">;</span>_i <span class="sh_symbol">&lt;</span> N_Test<span class="sh_symbol">;</span>_i<span class="sh_symbol">++)</span></li><li>    <span class="sh_cbracket">{</span></li><li> </li><li>        a <span class="sh_symbol">=</span> <span class="sh_function">rand</span><span class="sh_symbol">()</span> <span class="sh_symbol">%</span> <span class="sh_symbol">(</span>N<span class="sh_number">-1</span><span class="sh_symbol">)</span> <span class="sh_symbol">+</span> <span class="sh_number">1</span><span class="sh_symbol">,</span>temp <span class="sh_symbol">=</span> d<span class="sh_symbol">;</span></li><li>        x <span class="sh_symbol">=</span> <span class="sh_function">PowMod</span><span class="sh_symbol">(</span>a<span class="sh_symbol">,</span>temp<span class="sh_symbol">,</span>N<span class="sh_symbol">);</span></li><li>        </li><li>        <span class="sh_keyword">while</span> <span class="sh_symbol">(</span>temp <span class="sh_symbol">!=</span> N<span class="sh_number">-1</span> <span class="sh_symbol">&amp;&amp;</span> x <span class="sh_symbol">!=</span><span class="sh_number">1</span> <span class="sh_usertype">and</span><span class="sh_normal"> </span>x <span class="sh_symbol">!=</span> N<span class="sh_number">-1</span><span class="sh_symbol">)</span></li><li>        <span class="sh_cbracket">{</span></li><li>            x <span class="sh_symbol">=</span> <span class="sh_function">MultiplyMod</span><span class="sh_symbol">(</span>x<span class="sh_symbol">,</span>x<span class="sh_symbol">,</span>N<span class="sh_symbol">);</span></li><li>            </li><li>            temp <span class="sh_symbol">*=</span> <span class="sh_number">2</span><span class="sh_symbol">;</span></li><li>        <span class="sh_cbracket">}</span></li><li>        </li><li>        <span class="sh_keyword">if</span> <span class="sh_symbol">(</span>x <span class="sh_symbol">!=</span> N<span class="sh_number">-1</span> <span class="sh_symbol">&amp;&amp;</span> <span class="sh_symbol">!(</span>temp <span class="sh_symbol">%</span> <span class="sh_number">2</span><span class="sh_symbol">))</span></li><li>            <span class="sh_keyword">return</span> <span class="sh_keyword">false</span><span class="sh_symbol">;</span></li><li>    <span class="sh_cbracket">}</span></li><li>    </li><li>    <span class="sh_keyword">return</span> <span class="sh_keyword">true</span><span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre>
+      <pre class="snippet-textonly sh_sourceCode" style="display:none;" tabindex="0" contenteditable="">#define N_Test (100)
+
+long long MultiplyMod(long long A,long long B,long long MOD)
+{
+
+    // return A * B % MOD; if A &lt;= 2^32
+
+    if(!A || !B)return 0;
+    
+    long long x = 0,y = A %= MOD;
+    B %= MOD;
+    
+    while(B)
+    {
+       if(B % 2)
+          x = (x + y) % MOD;
+       y = (y + y) % MOD;
+       B /= 2; 
+    }
+    
+    return x % MOD;
+} 
+
+long long PowMod(long long base,long long exp,long long mod)
+{
+    long long x = 1,y = base;
+    
+    while(exp)
+    { 
+        if(exp % 2)
+            x = MultiplyMod(y,x,mod);
+            
+        y = MultiplyMod(y,y,mod);
+        
+        exp /= 2;
+    }
+    
+    return x % mod;
+}
+
+bool MillerRabinPrimalityTest(long long N)
+{
+    if(N == 2)return true;
+    
+    if(!(N % 2) || N &lt; 2)return false;
+ 
+    long long a,temp,x,d=N-1;
+    
+    while(!(d % 2))
+        d /= 2;
+        
+    for(int _i = 0;_i &lt; N_Test;_i++)
+    {
+ 
+        a = rand() % (N-1) + 1,temp = d;
+        x = PowMod(a,temp,N);
+        
+        while (temp != N-1 &amp;&amp; x !=1 and x != N-1)
+        {
+            x = MultiplyMod(x,x,N);
+            
+            temp *= 2;
+        }
+        
+        if (x != N-1 &amp;&amp; !(temp % 2))
+            return false;
+    }
+    
+    return true;
+}</pre>
+   </div>
+</div>
+<!-- end code -->
+<!-- 
           <pre><code>
 #define N_Test (100)
 
@@ -106,15 +190,17 @@ bool MillerRabinPrimalityTest(long long N)
     return true;
 }
           </code></pre>
-
+-->
         </section>
 
         <footer>
           Notebook is maintained by <a href="https://github.com/aras7">aras7</a><br>
+          <a target="blank"href="http://stackoverflow.com/users/1437986/andres">
+          <img src="http://stackoverflow.com/users/flair/1437986.png" width="208" height="58" alt="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+          </a>
+          <br>
           This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
         </footer>
-
-        
       </div>
     </div>
   </body>
