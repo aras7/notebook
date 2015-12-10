@@ -3,3 +3,6 @@
 <p><a href="https://en.wikipedia.org/wiki/Nim">wikipedia</a></p>
 <p><a href="https://www.topcoder.com/community/data-science/data-science-tutorials/algorithm-games/">Topcoder(Algorithm Games)</a></p>
 <p>Returns <b>true</b> if frist player wins</p>
+
+<br>
+<p><a href="http://letuskode.blogspot.cl/2014/08/grundy-numbers.html">Grundy numbers</a></p>
