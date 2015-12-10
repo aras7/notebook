@@ -1,0 +1,6 @@
+<h3>Fibonacci with matrix exponentiation</h3>
+
+<p>Use Fibonacci(n) to calculate fibonacci of n</p>
+<p>Use Sum_Fibonacci_0_to_n(n) to calculate the sum of fibonacci from 0 to n</p>
+
+<p><a href="http://www.nayuki.io/page/fast-fibonacci-algorithms">Doc</a></p>

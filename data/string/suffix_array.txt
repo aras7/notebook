@@ -1,0 +1,7 @@
+<h3>Suffix Array</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Suffix_array">wikipedia suffix array</a></p>
+<p><a href="https://en.wikipedia.org/wiki/LCP_array">wikipedia lcp</a></p>
+
+<p><a href="http://web.stanford.edu/class/cs97si/suffix-array.pdf">web.stanford.edu</a></p>
+<p>N log**2 N :/</p>

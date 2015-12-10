@@ -1,0 +1,5 @@
+<h3>Date class</h3>
+
+<p>Some languages like python or java(available on most of acm contest) have implementations of this algorithms but if you want to use C/C++ you must implement them by yourself.</p>
+
+<p>I DO NOT like to depend on technologies so I did it by myself, besides I think that we(ALL PROGRAMMERS) MUST understand an algorithm and know its implementation before use a generic library</p>

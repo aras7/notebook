@@ -1,0 +1,3 @@
+<h3>Use it to prove if a numbers is prime</h3>
+
+N_Test is the precision, higher -> answer is more precise but program is slower, keep a balance

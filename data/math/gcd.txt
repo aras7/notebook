@@ -1,0 +1,4 @@
+<h3>Greatest common divisor</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Greatest_common_divisor">https://en.wikipedia.org/wiki/Greatest_common_divisor</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Euclidean_algorithm">https://en.wikipedia.org/wiki/Euclidean_algorithm</a></p>

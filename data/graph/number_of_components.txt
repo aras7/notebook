@@ -1,0 +1,5 @@
+<h3>Number of components</h3>
+
+<p>With this you can know how many components a graph have</p>
+
+<p>For example if a 8 nodes graph has three edges, 1-4 , 2-5 and 4-6 then there are 4 components, (1,4,6), (2,5), (3) and (8)</p>

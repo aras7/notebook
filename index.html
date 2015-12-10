@@ -1,105 +1,125 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <link rel="stylesheet" type="text/css" href="http://syntaxhighlight.in/shi/css/shi_whatis.min.css" rel='stylesheet' type='text/css'/>
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Notebook by aras7</title>
-  </head>
+<head>
+    <style>
+    .CodeMirror {
+        height: auto;
+        border: 1px solid #ddd;
+    }
+    </style>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/codemirror/codemirror.css">
+</head>
 
-  <body>
-    <div id="container">
-      <div class="inner">
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6 col-md-2"></div>
+            <div class="col-xs-6 col-md-8">
+                <div class="row">
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav" id="main_menu">
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="explanation-code" class="well">
+                        <h4>What is this?</h4>
+                        <p>Here you can find some of my algorithms used in programming contests, the MOST of them are based on C++ but the important here is to understand them and use them to solve your own problems regardless the technology, I hope it be usefull for you, enjoy it.</p>
 
-        <header>
-          <h1><a href="index.html">Notebook</a></h1>
-          <h2></h2>
-        </header>
-
-        <hr>
-
-        <section id="main_content">
-          <h3>What is this?</h3>
-
-          <p>Here you can find some of my algorithms used in programming contests, the MOST of them are based on C++ but the important here is to understand them and use them to solve your own problems regardless the technology, I hope it be usefull for you, enjoy it.</p>
-          <p>If you find something wrong, any comment or improvement feel free to write me andres.arrieche.7@gmail.com</p>
-          
-          <h3>Table of Content</h3>
-        
-          <ul>
-            <li>
-              <a id="cat-maths" href="#cat-maths">Maths</a>
-              <ul>
-                <li><a href="bases.html">Bases</a></li>
-                <li><a href="negabases.html">Negative base</a></li>
-                <li><a href="roman-numbers.html">Roman numbers</a></li>
-                <li><a href="sieve-eratostenes.html">Sieve of eratostenes</a></li>
-                <li><a href="miller-rabin-primality-test.html">Miller Rabin Primality Test</a></li>
-                <li><a href="gcd.html">GCD</a></li>
-                <li><a href="combination.html">Combination</a></li>
-                <li><a href="fibonacci.html">Fibonacci</a></li>
-              </ul>
-            </li>
-            <li>
-              <a id="cat-dp" href="#cat-dp">DP</a>
-              <ul>
-                <li><a href="coins.html">Coin change</a></li>
-                <li><a href="maxsum2d.html">Max sum 2D</a></li>
-                <li><a href="rmq.html">RMQ</a></li>
-              </ul>
-            </li>
-            <li>
-              <a id="cat-string" href="#cat-string">String</a>
-              <ul>
-                <li><a href="suffixarray.html">Suffix Array</a></li>
-                <li><a href="lcs.html">LCS</a></li>
-                <li><a href="kmp.html">KMP</a></li>
-              </ul>
-            </li>
-            <li>
-              <a id="cat-graphs" href="#cat-graphs">Graph</a>
-              <ul>
-                <li><a href="floyd-warshall.html">Floyd Warshall</a></li>
-                <li><a href="dijkstra.html">Dijkstra</a></li>
-                <li><a href="components.html">Number of components</a></li>
-                <li><a href="bipartite.html">Bipartite</a></li>
-                <li><a href="prim.html">Minimum Spanning Tree</a></li>
-                <li><a href="topological-sort.html">Topological Sort</a></li>
-                <li><a href="flood-fill.html">Flood Fill</a></li>
-                <li><a href="segment-tree.html">Segment Tree</a></li>
-
-              </ul>
-            </li>
-            <li>
-              <a id="cat-others" href="#cat-others">Others</a>
-              <ul>
-                <li><a href="date.html">Date</a></li>
-              </ul>
-            </li>
-          </ul>
-
-        </section>
-
-
-        <footer>
-          Notebook is maintained by <a href="https://github.com/aras7">aras7</a><br>
-          <a target="blank"href="http://stackoverflow.com/users/1437986/andres">
-          <img src="http://stackoverflow.com/users/flair/1437986.png" width="208" height="58" alt="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
-          </a>
-          <br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+                        <p>If you find something wrong, any comment or improvement feel free to write me andres.arrieche.7@gmail.com</p>
+                        <p><a href="https://cl.linkedin.com/in/andresarrieche">Linkedin</a></p>
+                        <p>
+                            <a target="blank"href="http://stackoverflow.com/users/1437986/andres">
+                                <img src="http://stackoverflow.com/users/flair/1437986.png" width="208" height="58" alt="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+                            </a>
+                        </p>
+                    </div>
+                    <br>
+                    <textarea rows="80" id="source-code" style="display: none">
+                    </textarea>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-2"></div>
+        </div>
     </div>
-  </body>
+</body>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/codemirror/codemirror.js"></script>
+<!--<script src="lib/codemirror/keymap/sublime.js"></script>-->
+<!--<link rel="stylesheet" href="lib/codemirror/theme/monokai.css">-->
+<script src="lib/codemirror/mode/clike.js"></script>
+<script src="lib/codemirror/mode/javascript.js"></script>
+<script src="lib/codemirror/mode/python.js"></script>
+<script type="text/javascript">
+
+$.getJSON("data/app_menu.json", function(menu) {
+
+    var main_menu = $("#main_menu");
+    for (var i = 0; i < menu.length; i++) {
+        var li = $("<li class='dropdown'>").appendTo(main_menu);
+        $("<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>" + menu[i]["name"] + " <span class='caret'></span></a>").appendTo(li);
+
+        var new_menu = $("<ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu'>");
+        for (var j = 0; j < menu[i]["items"].length; j++) {
+            var _li = $("<li></li>");
+            var item = $("<a class='code-item' tabindex='-1'" + "data-source='" + menu[i]["items"][j]['source'] + "' " + "data-explanation='" + menu[i]["items"][j]['explanation'] + "'" + "data-mode='" + menu[i]["items"][j]['mode'] + "'" + " href='#'>" + menu[i]["items"][j]['name'] + "</a>")
+
+            item.appendTo(_li);
+            _li.appendTo(new_menu);
+        }
+        new_menu.appendTo(li);
+    }
+
+    $('.code-item').click(function() {
+        set_source_code($(this).data("source"), $(this).data("mode"));
+        set_explanation_code($(this).data("explanation"))
+    });
+});
+</script>
+<script type="text/javascript">
+var source_editor = null;
+
+function set_source_code(file, mode) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status == 0) {
+                var allText = rawFile.responseText;
+
+                if (source_editor == null)
+                    source_editor = CodeMirror.fromTextArea(document.getElementById("source-code"), {
+                        lineNumbers: true,
+                        matchBrackets: true,
+                        mode: mode,
+                        value: allText
+                    });
+
+                source_editor.setValue(allText);
+
+                source_editor.setSize("100%", "70%");
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
+function set_explanation_code(file) {
+
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status == 0) {
+                var allText = rawFile.responseText;
+                $('#explanation-code').html(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+</script>
+
 </html>

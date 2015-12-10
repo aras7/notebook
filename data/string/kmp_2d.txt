@@ -1,0 +1,5 @@
+<h3>Knuth–Morris–Pratt (KMP)</h3>
+
+<p>2D use it to loook for a rectangle inside a matrix<p>
+
+<p><a href="https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm">wikipedia</a></p>

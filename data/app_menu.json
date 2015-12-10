@@ -1,0 +1,62 @@
+[
+{
+	"name": "Math",
+	"items": [
+		{"name": "Bases", "source": "data/math/bases.cpp", "explanation": "data/math/bases.txt", "mode": "text/x-c++src"},
+		{"name": "Big bases", "source": "data/math/big_bases.cpp", "explanation": "data/math/big_bases.txt", "mode": "text/x-c++src"},
+		{"name": "Roman numbers", "source": "data/math/roman_numbers.cpp", "explanation": "data/math/roman_numbers.txt", "mode": "text/x-c++src"},
+		{"name": "Sieve of eratosthenes", "source": "data/math/eratosthenes.cpp", "explanation": "data/math/eratosthenes.txt", "mode": "text/x-c++src"},
+		{"name": "Prime numbers list(Sieve of eratosthenes)", "source": "data/math/eratosthenes_list.cpp", "explanation": "data/math/eratosthenes_list.txt", "mode": "text/x-c++src"},
+		{"name": "Miller Rabin Primality Test", "source": "data/math/miller_rabin_primality_test.cpp", "explanation": "data/math/miller_rabin_primality_test.txt", "mode": "text/x-c++src"},
+		{"name": "GCD", "source": "data/math/gcd.py", "explanation": "data/math/gcd.txt", "mode": "text/x-python"},
+		{"name": "Combination and permutations", "source": "data/math/combinations_permutations.cpp", "explanation": "data/math/combinations_permutations.txt", "mode": "text/x-c++src"},
+		{"name": "Fibonacci with matrix exponentiation", "source": "data/math/fibonacci.cpp", "explanation": "data/math/fibonacci.txt", "mode": "text/x-c++src"}
+	]
+},
+{
+	"name": "DP",
+	"items": [
+		{"name": "Coin change", "source": "data/dp/coin_change.cpp", "explanation": "data/dp/coin_change.txt", "mode": "text/x-c++src"},
+		{"name": "Max sum on an rectangle", "source": "data/dp/max_sum_on_an_rectangle.cpp", "explanation": "data/dp/max_sum_on_an_rectangle.txt", "mode": "text/x-c++src"},
+		{"name": "Range minimum query (RMQ)", "source": "data/dp/rmq.cpp", "explanation": "data/dp/rmq.txt", "mode": "text/x-c++src"}
+	]
+},
+{
+	"name": "String",
+	"items": [
+		{"name": "Longest common subsequence problem (LCS)", "source": "data/string/lcs.cpp", "explanation": "data/string/lcs.txt", "mode": "text/x-c++src"},
+		{"name": "Knuth–Morris–Pratt (KMP)", "source": "data/string/kmp.cpp", "explanation": "data/string/kmp.txt", "mode": "text/x-c++src"},
+		{"name": "Knuth–Morris–Pratt (KMP) 2D", "source": "data/string/kmp_2d.cpp", "explanation": "data/string/kmp_2d.txt", "mode": "text/x-c++src"},
+		{"name": "Suffix Array. lcp", "source": "data/string/suffix_array.cpp", "explanation": "data/string/suffix_array.txt", "mode": "text/x-c++src"}
+	]
+},
+{
+	"name": "Graph",
+	"items": [
+		{"name": "Floyd–Warshall", "source": "data/graph/floyd_warshall.cpp", "explanation": "data/graph/floyd_warshall.txt", "mode": "text/x-c++src"},
+		{"name": "Dijkstra", "source": "data/graph/dijkstra.cpp", "explanation": "data/graph/dijkstra.txt", "mode": "text/x-c++src"},
+		{"name": "Number of components", "source": "data/graph/number_of_components.cpp", "explanation": "data/graph/number_of_components.txt", "mode": "text/x-c++src"},
+		{"name": "Bipartite", "source": "data/graph/bipartite.cpp", "explanation": "data/graph/bipartite.txt", "mode": "text/x-c++src"},
+		{"name": "Minimum Spanning Tree(Kruskal)", "source": "data/graph/mst_kruskal.py", "explanation": "data/graph/mst_kruskal.txt", "mode": "text/x-c++src"},
+		{"name": "Minimum Spanning Tree(Prim)", "source": "data/graph/mst_prim.cpp", "explanation": "data/graph/mst_prim.txt", "mode": "text/x-c++src"},
+		{"name": "Topological Sort", "source": "data/graph/topological_sort.cpp", "explanation": "data/graph/topological_sort.txt", "mode": "text/x-c++src"},
+		{"name": "Flood Fill", "source": "data/graph/flood_fill.cpp", "explanation": "data/graph/flood_fill.txt", "mode": "text/x-c++src"},
+		{"name": "Segment Tree", "source": "data/graph/segment_tree.cpp", "explanation": "data/graph/segment_tree.txt", "mode": "text/x-c++src"}
+	]
+},
+{
+	"name": "Game theory",
+	"items": [
+		{"name": "Game of nim", "source": "data/game/nim.cpp", "explanation": "data/game/nim.txt", "mode": "text/x-c++src"},
+		{"name": "Ways to win the game of nim", "source": "data/game/ways_to_win_nim.cpp", "explanation": "data/game/ways_to_win_nim.txt", "mode": "text/x-c++src"}
+	]
+},
+{
+	"name": "Others",
+	"items": [
+		{"name": "Date class", "source": "data/others/date.cpp", "explanation": "data/others/date.txt", "mode": "text/x-c++src"},
+		{"name": "Week day per date", "source": "data/others/day_of_week.cpp", "explanation": "data/others/day_of_week.txt", "mode": "text/x-c++src"},
+		{"name": "Leap years in a range of dates", "source": "data/others/leap_years_by_range.cpp", "explanation": "data/others/leap_years_by_range.txt", "mode": "text/x-c++src"}
+	]
+}
+]

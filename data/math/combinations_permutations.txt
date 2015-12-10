@@ -1,0 +1,7 @@
+<h3>Combinations and permutations</h3>
+
+<p><a href="http://www.ub.edu/stat/GrupsInnovacio/Statmedia/demo/Temas/Capitulo1/B0C1m1t13.htm">www.ub.edu (spanish)</a></p>
+<p><a href="www.wolfram.com">wolfram.com</a></p>
+<p><a href="http://www.vitutor.com/pro/1/a_1.html">vitutor (spanish)</a></p>
+<p><a href="http://www.disfrutalasmatematicas.com/combinatoria/combinaciones-permutaciones.html">disfrutalasmatematicas (spanish)</a></p>
+
