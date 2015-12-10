@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/shi_whatis.min.css" rel='stylesheet' type='text/css'/>
+
+    <script src="javascripts/jquery-2.1.1.min.js"></script>
+    <script src="javascripts/shi_jquery.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Notebook by aras7</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1><a href="index.html">Notebook</a></h1>
+          <h2></h2>
+        </header>
+
+        <section class="clearfix">
+          <a href="index.html" class="button">Back to menu</a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+
+          <h3>To Roman</h3>
+<!-- start code -->
+<div class="snippet-container"><div class="sh_whatis snippet-wrap"><div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div><pre class="shi_pre sh_cpp snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_usertype">string</span><span class="sh_normal"> </span><span class="sh_function">toRoman</span><span class="sh_symbol">(</span><span class="sh_type">int</span> n<span class="sh_symbol">)</span> <span class="sh_comment">// 1 &lt;= n &lt;= 4.999</span></li><li><span class="sh_cbracket">{</span></li><li></li><li>    <span class="sh_keyword">static</span> <span class="sh_type">char</span> <span class="sh_symbol">*</span>tmp<span class="sh_symbol">[</span><span class="sh_number">4</span><span class="sh_symbol">][</span><span class="sh_number">10</span><span class="sh_symbol">]</span> <span class="sh_symbol">=</span> </li><li>    <span class="sh_cbracket">{</span></li><li>       <span class="sh_cbracket">{</span><span class="sh_string">""</span><span class="sh_symbol">,</span><span class="sh_string">"I"</span><span class="sh_symbol">,</span><span class="sh_string">"II"</span><span class="sh_symbol">,</span><span class="sh_string">"III"</span><span class="sh_symbol">,</span><span class="sh_string">"IV"</span><span class="sh_symbol">,</span><span class="sh_string">"V"</span><span class="sh_symbol">,</span><span class="sh_string">"VI"</span><span class="sh_symbol">,</span><span class="sh_string">"VII"</span><span class="sh_symbol">,</span><span class="sh_string">"VIII"</span><span class="sh_symbol">,</span><span class="sh_string">"IX"</span><span class="sh_cbracket">}</span> <span class="sh_symbol">,</span></li><li>       <span class="sh_cbracket">{</span><span class="sh_string">""</span><span class="sh_symbol">,</span><span class="sh_string">"X"</span><span class="sh_symbol">,</span><span class="sh_string">"XX"</span><span class="sh_symbol">,</span><span class="sh_string">"XXX"</span><span class="sh_symbol">,</span><span class="sh_string">"XL"</span><span class="sh_symbol">,</span><span class="sh_string">"L"</span><span class="sh_symbol">,</span><span class="sh_string">"LX"</span><span class="sh_symbol">,</span><span class="sh_string">"LXX"</span><span class="sh_symbol">,</span><span class="sh_string">"LXXX"</span><span class="sh_symbol">,</span><span class="sh_string">"XC"</span><span class="sh_cbracket">}</span> <span class="sh_symbol">,</span></li><li>       <span class="sh_cbracket">{</span><span class="sh_string">""</span><span class="sh_symbol">,</span><span class="sh_string">"C"</span><span class="sh_symbol">,</span><span class="sh_string">"CC"</span><span class="sh_symbol">,</span><span class="sh_string">"CCC"</span><span class="sh_symbol">,</span><span class="sh_string">"CD"</span><span class="sh_symbol">,</span><span class="sh_string">"D"</span><span class="sh_symbol">,</span><span class="sh_string">"DC"</span><span class="sh_symbol">,</span><span class="sh_string">"DCC"</span><span class="sh_symbol">,</span><span class="sh_string">"DCCC"</span><span class="sh_symbol">,</span><span class="sh_string">"CM"</span><span class="sh_cbracket">}</span> <span class="sh_symbol">,</span></li><li>       <span class="sh_cbracket">{</span><span class="sh_string">""</span><span class="sh_symbol">,</span><span class="sh_string">"M"</span><span class="sh_symbol">,</span><span class="sh_string">"MM"</span><span class="sh_symbol">,</span><span class="sh_string">"MMM"</span><span class="sh_symbol">,</span><span class="sh_string">"MMMM"</span><span class="sh_cbracket">}</span></li><li>    <span class="sh_cbracket">}</span><span class="sh_symbol">;</span></li><li>    </li><li>    <span class="sh_usertype">string</span><span class="sh_normal"> </span>s <span class="sh_symbol">=</span> <span class="sh_string">""</span><span class="sh_symbol">;</span></li><li>    </li><li>    s <span class="sh_symbol">+=</span> tmp<span class="sh_symbol">[</span><span class="sh_number">3</span><span class="sh_symbol">][</span>n<span class="sh_symbol">/</span><span class="sh_number">1000</span><span class="sh_symbol">];</span></li><li>    n<span class="sh_symbol">%=</span> <span class="sh_number">1000</span><span class="sh_symbol">;</span></li><li>    </li><li>    s <span class="sh_symbol">+=</span> tmp<span class="sh_symbol">[</span><span class="sh_number">2</span><span class="sh_symbol">][</span>n<span class="sh_symbol">/</span><span class="sh_number">100</span><span class="sh_symbol">];</span></li><li>    n<span class="sh_symbol">%=</span> <span class="sh_number">100</span><span class="sh_symbol">;</span></li><li>    </li><li>    s <span class="sh_symbol">+=</span> tmp<span class="sh_symbol">[</span><span class="sh_number">1</span><span class="sh_symbol">][</span>n<span class="sh_symbol">/</span><span class="sh_number">10</span><span class="sh_symbol">];</span></li><li>    n<span class="sh_symbol">%=</span> <span class="sh_number">10</span><span class="sh_symbol">;</span></li><li>    </li><li>    s <span class="sh_symbol">+=</span> tmp<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">][</span>n<span class="sh_symbol">];</span></li><li>    </li><li>    <span class="sh_keyword">return</span> s<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;" tabindex="0" contenteditable="">string toRoman(int n) // 1 &lt;= n &lt;= 4.999
+{
+
+    static char *tmp[4][10] = 
+    {
+       {"","I","II","III","IV","V","VI","VII","VIII","IX"} ,
+       {"","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"} ,
+       {"","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"} ,
+       {"","M","MM","MMM","MMMM"}
+    };
+    
+    string s = "";
+    
+    s += tmp[3][n/1000];
+    n%= 1000;
+    
+    s += tmp[2][n/100];
+    n%= 100;
+    
+    s += tmp[1][n/10];
+    n%= 10;
+    
+    s += tmp[0][n];
+    
+    return s;
+}</pre></div></div>
+
+<!-- end code -->
+<!-- 
+          <pre><code>
+string toRoman(int n) // 1 <= n <= 4.999
+{
+
+    static char *tmp[4][10] = 
+    {
+       {"","I","II","III","IV","V","VI","VII","VIII","IX"} ,
+       {"","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"} ,
+       {"","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"} ,
+       {"","M","MM","MMM","MMMM"}
+    };
+    
+    string s = "";
+    
+    s += tmp[3][n/1000];
+    n%= 1000;
+    
+    s += tmp[2][n/100];
+    n%= 100;
+    
+    s += tmp[1][n/10];
+    n%= 10;
+    
+    s += tmp[0][n];
+    
+    return s;
+}
+          </code></pre>
+-->
+          <h3>To Arabic</h3>
+<!-- start code -->
+<div class="snippet-container"><div class="sh_whatis snippet-wrap"><div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div><pre class="shi_pre sh_cpp snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_type">int</span> <span class="sh_function">toArabic</span><span class="sh_symbol">(</span><span class="sh_usertype">string</span><span class="sh_normal"> </span>roman<span class="sh_symbol">)</span></li><li><span class="sh_cbracket">{</span></li><li>    map<span class="sh_symbol">&lt;</span><span class="sh_type">char</span><span class="sh_symbol">,</span><span class="sh_type">int</span><span class="sh_symbol">&gt;</span>value<span class="sh_symbol">;</span></li><li>  </li><li>    value<span class="sh_symbol">[</span><span class="sh_string">'M'</span><span class="sh_symbol">]</span> <span class="sh_symbol">=</span> <span class="sh_number">1000</span><span class="sh_symbol">,</span></li><li>    value<span class="sh_symbol">[</span><span class="sh_string">'D'</span><span class="sh_symbol">]</span> <span class="sh_symbol">=</span> <span class="sh_number">500</span><span class="sh_symbol">,</span></li><li>    value<span class="sh_symbol">[</span><span class="sh_string">'C'</span><span class="sh_symbol">]</span> <span class="sh_symbol">=</span> <span class="sh_number">100</span><span class="sh_symbol">,</span></li><li>    value<span class="sh_symbol">[</span><span class="sh_string">'L'</span><span class="sh_symbol">]</span> <span class="sh_symbol">=</span> <span class="sh_number">50</span><span class="sh_symbol">,</span></li><li>    value<span class="sh_symbol">[</span><span class="sh_string">'X'</span><span class="sh_symbol">]</span> <span class="sh_symbol">=</span> <span class="sh_number">10</span><span class="sh_symbol">,</span></li><li>    value<span class="sh_symbol">[</span><span class="sh_string">'V'</span><span class="sh_symbol">]</span> <span class="sh_symbol">=</span> <span class="sh_number">5</span><span class="sh_symbol">,</span></li><li>    value<span class="sh_symbol">[</span><span class="sh_string">'I'</span><span class="sh_symbol">]</span> <span class="sh_symbol">=</span> <span class="sh_number">1</span><span class="sh_symbol">;</span></li><li>    </li><li>    <span class="sh_type">int</span> arabic <span class="sh_symbol">=</span> value<span class="sh_symbol">[</span>roman<span class="sh_symbol">[</span><span class="sh_number">0</span><span class="sh_symbol">]];</span></li><li></li><li>    <span class="sh_keyword">for</span><span class="sh_symbol">(</span><span class="sh_type">int</span> i <span class="sh_symbol">=</span> <span class="sh_number">1</span><span class="sh_symbol">,</span>size <span class="sh_symbol">=</span> roman<span class="sh_symbol">.</span><span class="sh_function">size</span><span class="sh_symbol">();</span>i <span class="sh_symbol">&lt;</span> size<span class="sh_symbol">;</span>i<span class="sh_symbol">++)</span></li><li>     <span class="sh_keyword">if</span><span class="sh_symbol">(</span>value<span class="sh_symbol">[</span>roman<span class="sh_symbol">[</span>i<span class="sh_symbol">]]</span> <span class="sh_symbol">&lt;=</span> value<span class="sh_symbol">[</span>roman<span class="sh_symbol">[</span>i<span class="sh_number">-1</span><span class="sh_symbol">]])</span></li><li>      arabic <span class="sh_symbol">+=</span> value<span class="sh_symbol">[</span>roman<span class="sh_symbol">[</span>i<span class="sh_symbol">]];</span></li><li>     <span class="sh_keyword">else</span></li><li>      arabic <span class="sh_symbol">=</span> arabic <span class="sh_symbol">+</span> value<span class="sh_symbol">[</span>roman<span class="sh_symbol">[</span>i<span class="sh_symbol">]]</span> <span class="sh_symbol">-</span> <span class="sh_number">2</span> <span class="sh_symbol">*</span> value<span class="sh_symbol">[</span>roman<span class="sh_symbol">[</span>i<span class="sh_number">-1</span><span class="sh_symbol">]];</span></li><li>    </li><li>    <span class="sh_keyword">return</span> arabic<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;" tabindex="0" contenteditable="">int toArabic(string roman)
+{
+    map&lt;char,int&gt;value;
+  
+    value['M'] = 1000,
+    value['D'] = 500,
+    value['C'] = 100,
+    value['L'] = 50,
+    value['X'] = 10,
+    value['V'] = 5,
+    value['I'] = 1;
+    
+    int arabic = value[roman[0]];
+
+    for(int i = 1,size = roman.size();i &lt; size;i++)
+     if(value[roman[i]] &lt;= value[roman[i-1]])
+      arabic += value[roman[i]];
+     else
+      arabic = arabic + value[roman[i]] - 2 * value[roman[i-1]];
+    
+    return arabic;
+}</pre></div></div>
+<!-- end code -->
+<!-- 
+          <pre><code>
+int toArabic(string roman)
+{
+    map<char,int>value;
+  
+    value['M'] = 1000,
+    value['D'] = 500,
+    value['C'] = 100,
+    value['L'] = 50,
+    value['X'] = 10,
+    value['V'] = 5,
+    value['I'] = 1;
+    
+    int arabic = value[roman[0]];
+
+    for(int i = 1,size = roman.size();i < size;i++)
+     if(value[roman[i]] <= value[roman[i-1]])
+      arabic += value[roman[i]];
+     else
+      arabic = arabic + value[roman[i]] - 2 * value[roman[i-1]];
+    
+    return arabic;
+}
+          </code></pre>
+-->
+        </section>
+
+        <footer>
+          Notebook is maintained by <a href="https://github.com/aras7">aras7</a><br>
+          <a target="blank"href="http://stackoverflow.com/users/1437986/andres">
+          <img src="http://stackoverflow.com/users/flair/1437986.png" width="208" height="58" alt="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+          </a>
+          <br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

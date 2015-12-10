@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/shi_whatis.min.css" rel='stylesheet' type='text/css'/>
+
+    <script src="javascripts/jquery-2.1.1.min.js"></script>
+    <script src="javascripts/shi_jquery.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Notebook by aras7</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1><a href="index.html">Notebook</a></h1>
+          <h2></h2>
+        </header>
+
+        <section class="clearfix">
+          <a href="index.html" class="button">Back to menu</a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+
+          <h3>Flood Fill</h3>
+
+          <a href="http://en.wikipedia.org/wiki/Flood_fill">wikipedia.org</a>
+<!-- start code -->
+<div class="snippet-container">
+   <div class="sh_whatis snippet-wrap">
+      <div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div>
+      <pre class="shi_pre sh_cpp snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_preproc">#define</span> tam <span class="sh_number">107</span> <span class="sh_comment">// mark -&gt; value which break the condition</span></li><li><span class="sh_type">void</span> <span class="sh_function">Flood_Fill</span><span class="sh_symbol">(</span><span class="sh_type">char</span> x<span class="sh_symbol">[</span>tam<span class="sh_symbol">][</span>tam<span class="sh_symbol">],</span><span class="sh_type">int</span> i<span class="sh_symbol">,</span><span class="sh_type">int</span> j<span class="sh_symbol">,</span><span class="sh_type">int</span> n<span class="sh_symbol">,</span><span class="sh_type">int</span> m<span class="sh_symbol">,</span><span class="sh_type">char</span> mark<span class="sh_symbol">)</span></li><li><span class="sh_cbracket">{</span></li><li>     <span class="sh_keyword">if</span><span class="sh_symbol">(!</span>i <span class="sh_symbol">||</span> <span class="sh_symbol">!</span>j <span class="sh_symbol">||</span> i <span class="sh_symbol">&gt;</span> n <span class="sh_symbol">||</span> j <span class="sh_symbol">&gt;</span> m <span class="sh_symbol">||</span> x<span class="sh_symbol">[</span>i<span class="sh_symbol">][</span>j<span class="sh_symbol">]</span> <span class="sh_symbol">==</span> mark<span class="sh_symbol">)</span></li><li>         <span class="sh_keyword">return</span> <span class="sh_symbol">;</span></li><li>         </li><li>     x<span class="sh_symbol">[</span>i<span class="sh_symbol">][</span>j<span class="sh_symbol">]</span> <span class="sh_symbol">=</span> mark<span class="sh_symbol">;</span></li><li>     </li><li>     <span class="sh_function">Flood_Fill</span><span class="sh_symbol">(</span>x<span class="sh_symbol">,</span>i<span class="sh_number">+1</span><span class="sh_symbol">,</span>j<span class="sh_symbol">,</span>n<span class="sh_symbol">,</span>m<span class="sh_symbol">,</span>mark<span class="sh_symbol">);</span></li><li>     <span class="sh_function">Flood_Fill</span><span class="sh_symbol">(</span>x<span class="sh_symbol">,</span>i<span class="sh_symbol">,</span>j<span class="sh_number">+1</span><span class="sh_symbol">,</span>n<span class="sh_symbol">,</span>m<span class="sh_symbol">,</span>mark<span class="sh_symbol">);</span></li><li>     </li><li>     <span class="sh_function">Flood_Fill</span><span class="sh_symbol">(</span>x<span class="sh_symbol">,</span>i<span class="sh_number">-1</span><span class="sh_symbol">,</span>j<span class="sh_symbol">,</span>n<span class="sh_symbol">,</span>m<span class="sh_symbol">,</span>mark<span class="sh_symbol">);</span></li><li>     <span class="sh_function">Flood_Fill</span><span class="sh_symbol">(</span>x<span class="sh_symbol">,</span>i<span class="sh_symbol">,</span>j<span class="sh_number">-1</span><span class="sh_symbol">,</span>n<span class="sh_symbol">,</span>m<span class="sh_symbol">,</span>mark<span class="sh_symbol">);</span></li><li>     </li><li>     <span class="sh_comment">//diagonals</span></li><li>     <span class="sh_function">Flood_Fill</span><span class="sh_symbol">(</span>x<span class="sh_symbol">,</span>i<span class="sh_number">+1</span><span class="sh_symbol">,</span>j<span class="sh_number">+1</span><span class="sh_symbol">,</span>n<span class="sh_symbol">,</span>m<span class="sh_symbol">,</span>mark<span class="sh_symbol">);</span></li><li>     <span class="sh_function">Flood_Fill</span><span class="sh_symbol">(</span>x<span class="sh_symbol">,</span>i<span class="sh_number">-1</span><span class="sh_symbol">,</span>j<span class="sh_number">-1</span><span class="sh_symbol">,</span>n<span class="sh_symbol">,</span>m<span class="sh_symbol">,</span>mark<span class="sh_symbol">);</span></li><li>     </li><li>     <span class="sh_function">Flood_Fill</span><span class="sh_symbol">(</span>x<span class="sh_symbol">,</span>i<span class="sh_number">-1</span><span class="sh_symbol">,</span>j<span class="sh_number">+1</span><span class="sh_symbol">,</span>n<span class="sh_symbol">,</span>m<span class="sh_symbol">,</span>mark<span class="sh_symbol">);</span></li><li>     <span class="sh_function">Flood_Fill</span><span class="sh_symbol">(</span>x<span class="sh_symbol">,</span>i<span class="sh_number">+1</span><span class="sh_symbol">,</span>j<span class="sh_number">-1</span><span class="sh_symbol">,</span>n<span class="sh_symbol">,</span>m<span class="sh_symbol">,</span>mark<span class="sh_symbol">);</span></li><li><span class="sh_cbracket">}</span></li></ol></pre>
+      <pre class="snippet-textonly sh_sourceCode" style="display:none;" tabindex="0" contenteditable="">#define tam 107 // mark -&gt; value which break the condition
+void Flood_Fill(char x[tam][tam],int i,int j,int n,int m,char mark)
+{
+     if(!i || !j || i &gt; n || j &gt; m || x[i][j] == mark)
+         return ;
+         
+     x[i][j] = mark;
+     
+     Flood_Fill(x,i+1,j,n,m,mark);
+     Flood_Fill(x,i,j+1,n,m,mark);
+     
+     Flood_Fill(x,i-1,j,n,m,mark);
+     Flood_Fill(x,i,j-1,n,m,mark);
+     
+     //diagonals
+     Flood_Fill(x,i+1,j+1,n,m,mark);
+     Flood_Fill(x,i-1,j-1,n,m,mark);
+     
+     Flood_Fill(x,i-1,j+1,n,m,mark);
+     Flood_Fill(x,i+1,j-1,n,m,mark);
+}</pre>
+   </div>
+</div>
+<!-- end code -->
+
+<!--
+          <pre><code>
+#define tam 107 // mark -> value which break the condition
+void Flood_Fill(char x[tam][tam],int i,int j,int n,int m,char mark)
+{
+     if(!i || !j || i > n || j > m || x[i][j] == mark)
+         return ;
+         
+     x[i][j] = mark;
+     
+     Flood_Fill(x,i+1,j,n,m,mark);
+     Flood_Fill(x,i,j+1,n,m,mark);
+     
+     Flood_Fill(x,i-1,j,n,m,mark);
+     Flood_Fill(x,i,j-1,n,m,mark);
+     
+     //diagonals
+     Flood_Fill(x,i+1,j+1,n,m,mark);
+     Flood_Fill(x,i-1,j-1,n,m,mark);
+     
+     Flood_Fill(x,i-1,j+1,n,m,mark);
+     Flood_Fill(x,i+1,j-1,n,m,mark);
+}
+          </code></pre>
+-->
+        </section>
+
+        <footer>
+          Notebook is maintained by <a href="https://github.com/aras7">aras7</a><br>
+          <a target="blank"href="http://stackoverflow.com/users/1437986/andres">
+          <img src="http://stackoverflow.com/users/flair/1437986.png" width="208" height="58" alt="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+          </a>
+          <br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>     
+      </div>
+    </div>
+  </body>
+</html>

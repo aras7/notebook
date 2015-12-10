@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/shi_whatis.min.css" rel='stylesheet' type='text/css'/>
+
+    <script src="javascripts/jquery-2.1.1.min.js"></script>
+    <script src="javascripts/shi_jquery.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Notebook by aras7</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1><a href="index.html">Notebook</a></h1>
+          <h2></h2>
+        </header>
+
+        <section class="clearfix">
+          <a href="index.html" class="button">Back to menu</a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+
+          <h3>RMQ</h3>
+
+          <p><a href="http://en.wikipedia.org/wiki/Range_Minimum_Query">wikipedia.org</a></p>
+          <p><a href="http://www.topcoder.com/tc?d1=tutorials&d2=lowestCommonAncestor&module=Static#Range_Minimum_Query_(RMQ)">topcoder.com/tc</a></p>
+<!-- start code -->
+<div class="snippet-container">
+   <div class="sh_whatis snippet-wrap">
+      <div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div>
+      <pre class="shi_pre sh_cpp snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_keyword">typedef</span> <span class="sh_type">int</span> NUM<span class="sh_symbol">;</span></li><li><span class="sh_usertype">vector&lt;vector&lt;NUM&gt; &gt; RMQ(vector&lt;NUM&gt;</span><span class="sh_normal"> </span>X<span class="sh_symbol">)</span></li><li><span class="sh_cbracket">{</span></li><li>     <span class="sh_type">int</span> N <span class="sh_symbol">=</span> X<span class="sh_symbol">.</span><span class="sh_function">size</span><span class="sh_symbol">();</span></li><li>     </li><li>     vector<span class="sh_symbol">&lt;</span>vector<span class="sh_symbol">&lt;</span>NUM<span class="sh_symbol">&gt;</span> <span class="sh_symbol">&gt;</span><span class="sh_function">M</span> <span class="sh_symbol">(</span> N<span class="sh_symbol">,</span> vector<span class="sh_symbol">&lt;</span>NUM<span class="sh_symbol">&gt;</span> <span class="sh_symbol">(</span><span class="sh_keyword">static_cast</span><span class="sh_symbol">&lt;</span><span class="sh_type">int</span><span class="sh_symbol">&gt;(</span><span class="sh_function">log2</span><span class="sh_symbol">(</span>N<span class="sh_symbol">))+</span><span class="sh_number">1</span><span class="sh_symbol">,</span><span class="sh_number">0</span> <span class="sh_symbol">));</span></li><li>     </li><li>     <span class="sh_keyword">for</span><span class="sh_symbol">(</span><span class="sh_type">int</span> i <span class="sh_symbol">=</span> <span class="sh_number">0</span><span class="sh_symbol">;</span>i <span class="sh_symbol">&lt;</span> N<span class="sh_symbol">;</span>i<span class="sh_symbol">++)</span></li><li>        M<span class="sh_symbol">[</span>i<span class="sh_symbol">][</span><span class="sh_number">0</span><span class="sh_symbol">]</span> <span class="sh_symbol">=</span> i<span class="sh_symbol">;</span></li><li>        </li><li>     <span class="sh_keyword">for</span><span class="sh_symbol">(</span><span class="sh_type">int</span> h<span class="sh_symbol">,</span>i <span class="sh_symbol">=</span> <span class="sh_number">1</span><span class="sh_symbol">;</span> <span class="sh_symbol">(</span><span class="sh_number">1</span> <span class="sh_symbol">&lt;&lt;</span> i<span class="sh_symbol">)</span> <span class="sh_symbol">&lt;=</span> N<span class="sh_symbol">;</span> i<span class="sh_symbol">++)</span></li><li>         <span class="sh_keyword">for</span><span class="sh_symbol">(</span>h <span class="sh_symbol">=</span> <span class="sh_number">0</span><span class="sh_symbol">;</span>h <span class="sh_symbol">+</span> <span class="sh_symbol">(</span><span class="sh_number">1</span> <span class="sh_symbol">&lt;&lt;</span> i<span class="sh_symbol">)</span> <span class="sh_symbol">-</span> <span class="sh_number">1</span> <span class="sh_symbol">&lt;</span> N<span class="sh_symbol">;</span>h<span class="sh_symbol">++)</span></li><li>             <span class="sh_keyword">if</span><span class="sh_symbol">(</span> X<span class="sh_symbol">[</span> M<span class="sh_symbol">[</span>h<span class="sh_symbol">][</span>i<span class="sh_number">-1</span><span class="sh_symbol">]</span> <span class="sh_symbol">]</span> <span class="sh_symbol">&gt;=</span> X<span class="sh_symbol">[</span> M<span class="sh_symbol">[</span>h <span class="sh_symbol">+</span> <span class="sh_symbol">(</span><span class="sh_number">1</span> <span class="sh_symbol">&lt;&lt;</span> <span class="sh_symbol">(</span>i<span class="sh_number">-1</span><span class="sh_symbol">))][</span>i<span class="sh_number">-1</span><span class="sh_symbol">]</span> <span class="sh_symbol">])</span></li><li>                 M<span class="sh_symbol">[</span>h<span class="sh_symbol">][</span>i<span class="sh_symbol">]</span> <span class="sh_symbol">=</span> M<span class="sh_symbol">[</span>h<span class="sh_symbol">][</span>i<span class="sh_number">-1</span><span class="sh_symbol">];</span></li><li>             <span class="sh_keyword">else</span></li><li>                 M<span class="sh_symbol">[</span>h<span class="sh_symbol">][</span>i<span class="sh_symbol">]</span> <span class="sh_symbol">=</span> M<span class="sh_symbol">[</span>h <span class="sh_symbol">+</span> <span class="sh_symbol">(</span><span class="sh_number">1</span> <span class="sh_symbol">&lt;&lt;</span> <span class="sh_symbol">(</span>i<span class="sh_number">-1</span><span class="sh_symbol">))][</span>i<span class="sh_number">-1</span><span class="sh_symbol">];</span></li><li>     </li><li>     <span class="sh_keyword">return</span> M<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li></li><li>k <span class="sh_symbol">=</span> <span class="sh_keyword">static_cast</span><span class="sh_symbol">&lt;</span><span class="sh_type">int</span><span class="sh_symbol">&gt;(</span> <span class="sh_function">log2</span> <span class="sh_symbol">(</span> j <span class="sh_symbol">-</span> i <span class="sh_symbol">+</span> <span class="sh_number">1</span> <span class="sh_symbol">)</span> <span class="sh_symbol">);</span></li><li>pos <span class="sh_symbol">=</span> A<span class="sh_symbol">[</span>  M<span class="sh_symbol">[</span> i <span class="sh_symbol">]</span> <span class="sh_symbol">[</span> k <span class="sh_symbol">]</span>  <span class="sh_symbol">]</span>  <span class="sh_symbol">&gt;=</span>  A<span class="sh_symbol">[</span>  M<span class="sh_symbol">[</span> j <span class="sh_symbol">-</span> <span class="sh_symbol">(</span><span class="sh_number">1</span> <span class="sh_symbol">&lt;&lt;</span>  k<span class="sh_symbol">)</span> <span class="sh_symbol">+</span> <span class="sh_number">1</span><span class="sh_symbol">]</span>  <span class="sh_symbol">[</span> k <span class="sh_symbol">]</span>  <span class="sh_symbol">]</span> <span class="sh_symbol">?</span> M<span class="sh_symbol">[</span> i <span class="sh_symbol">]</span>  <span class="sh_symbol">[</span> k <span class="sh_symbol">]</span> <span class="sh_symbol">:</span> M<span class="sh_symbol">[</span> j <span class="sh_symbol">-</span> <span class="sh_symbol">(</span><span class="sh_number">1</span> <span class="sh_symbol">&lt;&lt;</span> k<span class="sh_symbol">)</span> <span class="sh_symbol">+</span> <span class="sh_number">1</span> <span class="sh_symbol">]</span> <span class="sh_symbol">[</span> k <span class="sh_symbol">];</span></li><li><span class="sh_function">printf</span><span class="sh_symbol">(</span><span class="sh_string">"%d"</span><span class="sh_symbol">,</span>A<span class="sh_symbol">[</span>pos<span class="sh_symbol">]);</span></li></ol></pre>
+      <pre class="snippet-textonly sh_sourceCode" style="display:none;" tabindex="0" contenteditable="">typedef int NUM;
+vector&lt;vector&lt;NUM&gt; &gt; RMQ(vector&lt;NUM&gt; X)
+{
+     int N = X.size();
+     
+     vector&lt;vector&lt;NUM&gt; &gt;M ( N, vector&lt;NUM&gt; (static_cast&lt;int&gt;(log2(N))+1,0 ));
+     
+     for(int i = 0;i &lt; N;i++)
+        M[i][0] = i;
+        
+     for(int h,i = 1; (1 &lt;&lt; i) &lt;= N; i++)
+         for(h = 0;h + (1 &lt;&lt; i) - 1 &lt; N;h++)
+             if( X[ M[h][i-1] ] &gt;= X[ M[h + (1 &lt;&lt; (i-1))][i-1] ])
+                 M[h][i] = M[h][i-1];
+             else
+                 M[h][i] = M[h + (1 &lt;&lt; (i-1))][i-1];
+     
+     return M;
+}
+
+k = static_cast&lt;int&gt;( log2 ( j - i + 1 ) );
+pos = A[  M[ i ] [ k ]  ]  &gt;=  A[  M[ j - (1 &lt;&lt;  k) + 1]  [ k ]  ] ? M[ i ]  [ k ] : M[ j - (1 &lt;&lt; k) + 1 ] [ k ];
+printf("%d",A[pos]);</pre>
+   </div>
+</div>
+<!-- end code -->
+
+<!--
+          <pre><code>
+typedef int NUM;
+vector<vector<NUM> > RMQ(vector<NUM> X)
+{
+     int N = X.size();
+     
+     vector<vector<NUM> >M ( N, vector<NUM> (static_cast<int>(log2(N))+1,0 ));
+     
+     for(int i = 0;i < N;i++)
+        M[i][0] = i;
+        
+     for(int h,i = 1; (1 << i) <= N; i++)
+         for(h = 0;h + (1 << i) - 1 < N;h++)
+             if( X[ M[h][i-1] ] >= X[ M[h + (1 << (i-1))][i-1] ])
+                 M[h][i] = M[h][i-1];
+             else
+                 M[h][i] = M[h + (1 << (i-1))][i-1];
+     
+     return M;
+}
+
+k = static_cast<int>( log2 ( j - i + 1 ) );
+pos = A[  M[ i ] [ k ]  ]  >=  A[  M[ j - (1 <<  k) + 1]  [ k ]  ] ? M[ i ]  [ k ] : M[ j - (1 << k) + 1 ] [ k ];
+printf("%d",A[pos]);
+          </code></pre>
+-->
+        </section>
+
+        <footer>
+          Notebook is maintained by <a href="https://github.com/aras7">aras7</a><br>
+          <a target="blank"href="http://stackoverflow.com/users/1437986/andres">
+          <img src="http://stackoverflow.com/users/flair/1437986.png" width="208" height="58" alt="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Andres at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+          </a>
+          <br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+        
+      </div>
+    </div>
+  </body>
+</html>
