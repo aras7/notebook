@@ -1,0 +1,7 @@
+<h3>Find path with "lower maximun" edge's value</h3>
+
+<p>If the maximun min value is needed just use maximum spanning tree and then look for the minimun edge. For example if you want to find a road which less capacity is maximixed like in max flow problems (Not tested yet).</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Widest_path_problem">Widest path problem(wikipedia)</a></p>
+<p><a href="http://stackoverflow.com/questions/18552964/finding-path-with-maximum-minimum-capacity-in-graph">Finding path with maximum minimum capacity in graph(Stackoverflow)</a></p>
+<p><a href="https://www.hackerrank.com/challenges/jack-goes-to-rapture">Use case(hackerrank)</a></p>

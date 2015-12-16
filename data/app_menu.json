@@ -37,8 +37,9 @@
 		{"name": "Dijkstra", "source": "data/graph/dijkstra.cpp", "explanation": "data/graph/dijkstra.txt", "mode": "text/x-c++src"},
 		{"name": "Number of components", "source": "data/graph/number_of_components.cpp", "explanation": "data/graph/number_of_components.txt", "mode": "text/x-c++src"},
 		{"name": "Bipartite", "source": "data/graph/bipartite.cpp", "explanation": "data/graph/bipartite.txt", "mode": "text/x-c++src"},
-		{"name": "Minimum Spanning Tree(Kruskal)", "source": "data/graph/mst_kruskal.py", "explanation": "data/graph/mst_kruskal.txt", "mode": "text/x-c++src"},
 		{"name": "Minimum Spanning Tree(Prim)", "source": "data/graph/mst_prim.cpp", "explanation": "data/graph/mst_prim.txt", "mode": "text/x-c++src"},
+		{"name": "Minimum Spanning Tree(Kruskal)", "source": "data/graph/mst_kruskal.py", "explanation": "data/graph/mst_kruskal.txt", "mode": "text/x-python"},
+		{"name": "Widest path/Bottleneck shortest path", "source": "data/graph/widest_path.py", "explanation": "data/graph/widest_path.txt", "mode": "text/x-python"},		
 		{"name": "Topological Sort", "source": "data/graph/topological_sort.cpp", "explanation": "data/graph/topological_sort.txt", "mode": "text/x-c++src"},
 		{"name": "Flood Fill", "source": "data/graph/flood_fill.cpp", "explanation": "data/graph/flood_fill.txt", "mode": "text/x-c++src"},
 		{"name": "Segment Tree", "source": "data/graph/segment_tree.cpp", "explanation": "data/graph/segment_tree.txt", "mode": "text/x-c++src"}
