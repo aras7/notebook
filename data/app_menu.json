@@ -9,7 +9,8 @@
 		{"name": "Prime numbers list(Sieve of eratosthenes)", "source": "data/math/eratosthenes_list.cpp", "explanation": "data/math/eratosthenes_list.txt", "mode": "text/x-c++src"},
 		{"name": "Miller Rabin Primality Test", "source": "data/math/miller_rabin_primality_test.cpp", "explanation": "data/math/miller_rabin_primality_test.txt", "mode": "text/x-c++src"},
 		{"name": "GCD", "source": "data/math/gcd.py", "explanation": "data/math/gcd.txt", "mode": "text/x-python"},
-		{"name": "Combination and permutations", "source": "data/math/combinations_permutations.cpp", "explanation": "data/math/combinations_permutations.txt", "mode": "text/x-c++src"},
+		{"name": "Combination", "source": "data/math/combinations_permutations.cpp", "explanation": "data/math/combinations_permutations.txt", "mode": "text/x-c++src"},
+		{"name": "Permutations with repetitions", "source": "data/math/permutations_with_repetitions.py", "explanation": "data/math/permutations_with_repetitions.txt", "mode": "text/x-python"},
 		{"name": "Fibonacci with matrix exponentiation", "source": "data/math/fibonacci.cpp", "explanation": "data/math/fibonacci.txt", "mode": "text/x-c++src"}
 	]
 },

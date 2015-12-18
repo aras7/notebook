@@ -1,0 +1,5 @@
+<h3>Permutations with repetitions</h3>
+
+<p><a href="http://www.ub.edu/stat/GrupsInnovacio/Statmedia/demo/Temas/Capitulo1/B0C1m1t13.htm">www.ub.edu (spanish)</a></p>
+<p>How many words can be made with 3A, 2B, 4C ?</p>
+<p>In this case list_elements will be [3, 2, 4] and N = 9, the sum of all letters</p>
