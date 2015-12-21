@@ -15,6 +15,12 @@
 	]
 },
 {
+	"name": "Geometry",
+	"items": [
+		{"name": "Convex hull (Graham scan)", "source": "data/geometry/convex_hull.cpp", "explanation": "data/geometry/convex_hull.txt", "mode": "text/x-c++src"}
+	]
+},
+{
 	"name": "DP",
 	"items": [
 		{"name": "Coin change", "source": "data/dp/coin_change.cpp", "explanation": "data/dp/coin_change.txt", "mode": "text/x-c++src"},

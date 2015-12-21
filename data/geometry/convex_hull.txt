@@ -1,0 +1,4 @@
+<h3>Convex hull</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Convex_hull">wikipedia (Convex hull)</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Graham_scan">wikipedia (Graham scan algorithm)</a></p>
