@@ -43,6 +43,7 @@
 	"items": [
 		{"name": "Floyd–Warshall", "source": "data/graph/floyd_warshall.cpp", "explanation": "data/graph/floyd_warshall.txt", "mode": "text/x-c++src"},
 		{"name": "Dijkstra", "source": "data/graph/dijkstra.cpp", "explanation": "data/graph/dijkstra.txt", "mode": "text/x-c++src"},
+		{"name": "Bellman-Ford", "source": "data/graph/bellman_ford.cpp", "explanation": "data/graph/bellman_ford.txt", "mode": "text/x-c++src"},
 		{"name": "Number of components", "source": "data/graph/number_of_components.cpp", "explanation": "data/graph/number_of_components.txt", "mode": "text/x-c++src"},
 		{"name": "Bipartite", "source": "data/graph/bipartite.cpp", "explanation": "data/graph/bipartite.txt", "mode": "text/x-c++src"},
 		{"name": "Minimum Spanning Tree(Prim)", "source": "data/graph/mst_prim.cpp", "explanation": "data/graph/mst_prim.txt", "mode": "text/x-c++src"},
