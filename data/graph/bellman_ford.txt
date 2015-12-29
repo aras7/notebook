@@ -2,5 +2,9 @@
 
 <p><a href="https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm">wikipedia</a></p>
 
-<p>Tested at <a href="https://www.hackerrank.com/challenges/dijkstrashortreach">hackerrank</a> and <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=499">UVa online judge</a></p>
-<p>BUT <a href="http://rosalind.info/problems/nwc/">rosalind.info</a> says it is WRONG :S</p>
+<p><b>Negative cycle:</b> If you need to check if a negative cycle exists anywhere in the graph set all
+distances to <b>cero(0)</b> instead of <b>INF</b> in line 18:</p>
+
+<p><code>vector<int> min_distance(N, 0);</code></p>
+
+<p><a href="http://stackoverflow.com/questions/5534540/negative-weight-cycle-algorithm#answer-12995356">This answer at stackoverflow.com</a> helped me a lot!</p>
