@@ -2,7 +2,7 @@
 
 <p><a href="https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm">wikipedia</a></p>
 
-<p><b>Negative cycle:</b> If you need to check if a negative cycle exists anywhere in the graph set all
+<p><b>Negative cycle:</b> If you only need to check if a negative cycle exists anywhere in the graph set all
 distances to <b>cero(0)</b> instead of <b>INF</b> in line 18:</p>
 
 <p><code>vector<int> min_distance(N, 0);</code></p>
