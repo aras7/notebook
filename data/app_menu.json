@@ -64,6 +64,7 @@
 {
 	"name": "Others",
 	"items": [
+		{"name": "Binary Search", "source": "data/others/binary_search.py", "explanation": "data/others/binary_search.txt", "mode": "text/x-python"},
 		{"name": "Date class", "source": "data/others/date.cpp", "explanation": "data/others/date.txt", "mode": "text/x-c++src"},
 		{"name": "Week day per date", "source": "data/others/day_of_week.cpp", "explanation": "data/others/day_of_week.txt", "mode": "text/x-c++src"},
 		{"name": "Leap years in a range of dates", "source": "data/others/leap_years_by_range.cpp", "explanation": "data/others/leap_years_by_range.txt", "mode": "text/x-c++src"}
