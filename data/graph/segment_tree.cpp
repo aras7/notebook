@@ -92,6 +92,8 @@ class SegmentTree {
 		}
 };
 
+
+SegmentTree segment_tree = SegmentTree();
 segment_tree.Init(n, 0, true);
 segment_tree.build(data, 1, 0, n-1)
 segment_tree.update(i, j, value);
