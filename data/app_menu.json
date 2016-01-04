@@ -33,6 +33,7 @@
 	"name": "String",
 	"items": [
 		{"name": "Longest common subsequence problem (LCS)", "source": "data/string/lcs.cpp", "explanation": "data/string/lcs.txt", "mode": "text/x-c++src"},
+		{"name": "Edit distance", "source": "data/string/edit_distance.cpp", "explanation": "data/string/edit_distance.txt", "mode": "text/x-c++src"},
 		{"name": "Knuth–Morris–Pratt (KMP)", "source": "data/string/kmp.cpp", "explanation": "data/string/kmp.txt", "mode": "text/x-c++src"},
 		{"name": "Knuth–Morris–Pratt (KMP) 2D", "source": "data/string/kmp_2d.cpp", "explanation": "data/string/kmp_2d.txt", "mode": "text/x-c++src"},
 		{"name": "Suffix Array. lcp", "source": "data/string/suffix_array.cpp", "explanation": "data/string/suffix_array.txt", "mode": "text/x-c++src"}

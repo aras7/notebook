@@ -1,0 +1,7 @@
+<h3>Edit distance</h3>
+
+<p>Make string 'A' and 'B' equal using <b>Insertion, Deletion and Substitution</b></p>
+<p>For only  <b>Insertion and Deletion</b> use Longest common subsequence (LCS)</p>
+<p><a href="https://en.wikipedia.org/wiki/Edit_distance">wikipedia</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Wagner%E2%80%93Fischer_algorithm">Wagner–Fischer algorithm (wikipedia)</a></p>
+<p>ToDo: check for swaping <a href="https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance">Damerau–Levenshtein distance</a></p>
