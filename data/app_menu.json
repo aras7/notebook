@@ -3,6 +3,7 @@
 	"name": "Math",
 	"items": [
 		{"name": "Bases", "source": "data/math/bases.cpp", "explanation": "data/math/bases.txt", "mode": "text/x-c++src"},
+		{"name": "Negative bases", "source": "data/math/negative_bases.cpp", "explanation": "data/math/negative_bases.txt", "mode": "text/x-c++src"},
 		{"name": "Big bases", "source": "data/math/big_bases.cpp", "explanation": "data/math/big_bases.txt", "mode": "text/x-c++src"},
 		{"name": "Roman numbers", "source": "data/math/roman_numbers.cpp", "explanation": "data/math/roman_numbers.txt", "mode": "text/x-c++src"},
 		{"name": "Sieve of eratosthenes", "source": "data/math/eratosthenes.cpp", "explanation": "data/math/eratosthenes.txt", "mode": "text/x-c++src"},

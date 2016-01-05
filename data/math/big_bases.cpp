@@ -5,7 +5,7 @@ vector<int> base10_to_base(int n,int base)
     return num;
 }
 
-long long  to_base10(vector<int>s,int base)
+long long to_base10(vector<int>s,int base)
 {
     unsigned long long n = 0,i= s.size();
     while(i--)n = n*base + s[i];
