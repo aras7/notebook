@@ -9,9 +9,10 @@ int edit_distance[TAM][TAM];
 int Wagner_Fischer_algorithm(string A, string B)
 {
 	memset(edit_distance, 0, sizeof edit_distance);
-
-	for(int i = 1; i <= A.size(); edit_distance[i][0] = i++);
-	for(int i = 1; i <= B.size(); edit_distance[0][i] = i++);
+	for(int i = 0; i <= A.size(); i++)
+		edit_distance[i][0] = i;
+	for(int i = 0; i <= B.size(); i++)
+		edit_distance[0][i] = i;
 
 	for(int j,i = 1;i <= A.size();i++)
 		for(j = 1;j <= B.size();j++)
