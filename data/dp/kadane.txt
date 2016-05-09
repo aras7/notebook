@@ -1,0 +1,5 @@
+<h3>Kadane</h3>
+
+<p>find max consecutive sum in the array</p>
+<p><a href="https://en.wikipedia.org/wiki/Maximum_subarray_problem">wikipedia</a></p>
+<p><a href="http://codeforces.com/blog/entry/13713">Kadane(codeforces blog)</a><p>

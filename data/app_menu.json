@@ -26,6 +26,7 @@
 	"name": "DP",
 	"items": [
 		{"name": "Coin change", "source": "data/dp/coin_change.cpp", "explanation": "data/dp/coin_change.txt", "mode": "text/x-c++src"},
+		{"name": "Kadane", "source": "data/dp/kadane.cpp", "explanation": "data/dp/kadane.txt", "mode": "text/x-c++src"},
 		{"name": "Max sum on an rectangle", "source": "data/dp/max_sum_on_an_rectangle.cpp", "explanation": "data/dp/max_sum_on_an_rectangle.txt", "mode": "text/x-c++src"},
 		{"name": "Max consecutive sum less than P", "source": "data/dp/max_sum_less_than_p.cpp", "explanation": "data/dp/max_sum_less_than_p.txt", "mode": "text/x-c++src"},
 		{"name": "Range minimum query (RMQ)", "source": "data/dp/rmq.cpp", "explanation": "data/dp/rmq.txt", "mode": "text/x-c++src"}
