@@ -19,9 +19,9 @@
 	"name": "Geometry",
 	"items": [
 		{"name": "Point class", "source": "data/geometry/point.cpp", "explanation": "data/geometry/point.txt", "mode": "text/x-c++src"},
+		{"name": "Closest pair of point(Sweep line)", "source": "data/geometry/closest_pair_point_distance_sweep_line.cpp", "explanation": "data/geometry/closest_pair_point_distance_sweep_line.txt", "mode": "text/x-c++src"},
 		{"name": "Convex hull (Graham scan)", "source": "data/geometry/convex_hull.cpp", "explanation": "data/geometry/convex_hull.txt", "mode": "text/x-c++src"},
-		{"name": "Perimeter of list of points", "source": "data/geometry/perimeter.cpp", "explanation": "data/geometry/perimeter.txt", "mode": "text/x-c++src"},
-		{"name": "Closest pair of point, min distance(Sweep line)", "source": "data/geometry/closest_pair_point_distance_sweep_line.cpp", "explanation": "data/geometry/closest_pair_point_distance_sweep_line.txt", "mode": "text/x-c++src"},
+		{"name": "Perimeter of list of points", "source": "data/geometry/perimeter.cpp", "explanation": "data/geometry/perimeter.txt", "mode": "text/x-c++src"}
 	]
 },
 {
