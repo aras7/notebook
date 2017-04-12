@@ -1,0 +1,3 @@
+<h3>Point class</h3>
+
+<p>To be used in other algorithms</p>
