@@ -1,26 +1,27 @@
-struct Point{
+template <class T>
+struct PointBase{
     int idx;
-    double x, y;
+    T x, y;
 
-    Point(): idx(-1), x(0), y(0) {}
-    Point(double _x, double _y): idx(-1) {
+    PointBase(): idx(-1), x(0), y(0) {}
+    PointBase(T _x, T _y): idx(-1) {
        x = _x, y = _y;
     }
 
-    Point(int _id, double _x, double _y) {
+    PointBase(int _id, T _x, T _y) {
        idx = _id, x = _x, y = _y;
     }
 
     // sort increasing per 'y' first
-    bool operator<(const Point& p) const {
+    bool operator<(const PointBase& p) const {
         return (y != p.y) ? y < p.y : x < p.x;
     }
 
-    bool operator==(const Point& p) const {
+    bool operator==(const PointBase& p) const {
         return x == p.x &&  y == p.y;
     }
 
-    double distance(Point p) {
+    T distance(PointBase p) {
         return sqrt((x - p.x) * (x - p.x) + (y - p.y) * (y - p.y));
     }
 
@@ -29,7 +30,10 @@ struct Point{
       if(salt) puts("");
     }
 };
+typedef PointBase<double> Point;
+
 // sort increasing per 'x' first
 bool cmp(Point a, Point b) {
     return (a.x != b.x) ? a.x < b.x : a.y < b.y;
 }
+

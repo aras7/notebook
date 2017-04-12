@@ -1,0 +1,5 @@
+<h3>Closest pair point distance(Sweep line)</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Closest_pair_of_points_problem">wikipedia (Closest pair of point problem)</a></p>
+<p><a href="https://www.topcoder.com/community/data-science/data-science-tutorials/line-sweep-algorithms/">Sweep line (topcoder)</a></p>
+<p>Requires using Point class</p>

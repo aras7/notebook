@@ -1,3 +1,4 @@
 <h3>Point class</h3>
 
 <p>To be used in other algorithms</p>
+<p>Remember to change <code>typedef PointBase<double> Point;</code> with the specific data type</p>

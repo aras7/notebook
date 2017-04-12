@@ -18,9 +18,10 @@
 {
 	"name": "Geometry",
 	"items": [
-                {"name": "Point class", "source": "data/geometry/point.cpp", "explanation": "data/geometry/point.txt", "mode": "text/x-c++src"},
+		{"name": "Point class", "source": "data/geometry/point.cpp", "explanation": "data/geometry/point.txt", "mode": "text/x-c++src"},
 		{"name": "Convex hull (Graham scan)", "source": "data/geometry/convex_hull.cpp", "explanation": "data/geometry/convex_hull.txt", "mode": "text/x-c++src"},
-		{"name": "Perimeter of list of points", "source": "data/geometry/perimeter.cpp", "explanation": "data/geometry/perimeter.txt", "mode": "text/x-c++src"}
+		{"name": "Perimeter of list of points", "source": "data/geometry/perimeter.cpp", "explanation": "data/geometry/perimeter.txt", "mode": "text/x-c++src"},
+		{"name": "Closest pair of point, min distance(Sweep line)", "source": "data/geometry/closest_pair_point_distance_sweep_line.cpp", "explanation": "data/geometry/closest_pair_point_distance_sweep_line.txt", "mode": "text/x-c++src"},
 	]
 },
 {
@@ -54,7 +55,7 @@
 		{"name": "Bipartite", "source": "data/graph/bipartite.cpp", "explanation": "data/graph/bipartite.txt", "mode": "text/x-c++src"},
 		{"name": "Minimum Spanning Tree(Prim)", "source": "data/graph/mst_prim.cpp", "explanation": "data/graph/mst_prim.txt", "mode": "text/x-c++src"},
 		{"name": "Minimum Spanning Tree(Kruskal)", "source": "data/graph/mst_kruskal.py", "explanation": "data/graph/mst_kruskal.txt", "mode": "text/x-python"},
-		{"name": "Widest path/Bottleneck shortest path", "source": "data/graph/widest_path.py", "explanation": "data/graph/widest_path.txt", "mode": "text/x-python"},		
+		{"name": "Widest path/Bottleneck shortest path", "source": "data/graph/widest_path.py", "explanation": "data/graph/widest_path.txt", "mode": "text/x-python"},
 		{"name": "Topological Sort", "source": "data/graph/topological_sort.cpp", "explanation": "data/graph/topological_sort.txt", "mode": "text/x-c++src"},
 		{"name": "Flood Fill", "source": "data/graph/flood_fill.cpp", "explanation": "data/graph/flood_fill.txt", "mode": "text/x-c++src"},
 		{"name": "Segment Tree", "source": "data/graph/segment_tree.cpp", "explanation": "data/graph/segment_tree.txt", "mode": "text/x-c++src"}
