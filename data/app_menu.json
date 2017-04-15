@@ -69,6 +69,13 @@
 	]
 },
 {
+	"name": "Brute Force",
+	"items": [
+		{"name": "Combinations", "source": "data/bruteforce/combinations.py", "explanation": "data/bruteforce/combinations.txt", "mode": "text/x-python"},
+		{"name": "All Pair Permutations between 2 sets", "source": "data/bruteforce/all_pair_permutations.py", "explanation": "data/bruteforce/all_pair_permutations.txt", "mode": "text/x-python"}
+	]
+},
+{
 	"name": "Others",
 	"items": [
 		{"name": "Binary Search", "source": "data/others/binary_search.py", "explanation": "data/others/binary_search.txt", "mode": "text/x-python"},

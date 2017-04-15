@@ -1,0 +1,14 @@
+<h3>All Pair Permutations Between 2 sets</h3>
+
+<p>Generate all possible set of pairs(matching) using 2 sets</p>
+<p>For sets <code>a = ['a', 'b', 'c']</code> and <code>b = [1, 2, 3]</code> we get:</p>
+
+<p>Fast for N <= 9</p>
+<p>For N = 10 can take up to 1 minutes</p>
+
+<p><code>a-1|b-2|c-3</code></p>
+<p><code>a-1|b-3|c-2</code></p>
+<p><code>a-2|b-1|c-3</code></p>
+<p><code>a-2|b-3|c-1</code></p>
+<p><code>a-3|b-1|c-2</code></p>
+<p><code>a-3|b-2|c-1</code></p>
