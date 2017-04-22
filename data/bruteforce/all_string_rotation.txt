@@ -1,0 +1,8 @@
+<h3>All string rotation</h3>
+
+<p>Return list(generator) with all rotation of string. For String <code>word</code> we get:</p>
+
+<p><code>word</code></p>
+<p><code>ordw</code></p>
+<p><code>rdwo</code></p>
+<p><code>dwor</code></p>

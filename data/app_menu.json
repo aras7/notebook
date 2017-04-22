@@ -72,7 +72,8 @@
 	"name": "Brute Force",
 	"items": [
 		{"name": "Combinations", "source": "data/bruteforce/combinations.py", "explanation": "data/bruteforce/combinations.txt", "mode": "text/x-python"},
-		{"name": "All Pair Permutations between 2 sets", "source": "data/bruteforce/all_pair_permutations.py", "explanation": "data/bruteforce/all_pair_permutations.txt", "mode": "text/x-python"}
+		{"name": "All Pair Permutations between 2 sets", "source": "data/bruteforce/all_pair_permutations.py", "explanation": "data/bruteforce/all_pair_permutations.txt", "mode": "text/x-python"},
+		{"name": "All string rotation", "source": "data/bruteforce/all_string_rotation.py", "explanation": "data/bruteforce/all_string_rotation.txt", "mode": "text/x-python"}
 	]
 },
 {
