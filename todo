@@ -1,0 +1,21 @@
+
+floyd
+LCA
+maxflow/maximum-bipartite-matching
+2sat
+stable marriage
+8 queens
+traveling salesman problem
+
+take advantage of https://docs.oracle.com/javase/7/docs/api/java/awt/geom/Rectangle2D.html
+
+
+EY!
+https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.optimize.linear_sum_assignment.html
+check http://bigocheatsheet.com/
+http://stackoverflow.com/questions/487258/what-is-a-plain-english-explanation-of-big-o-notation
+
+focus in variables/datastructures memory space!!
+implement by your own "any basic" data structure
+implement self balanced binary search tree
+implement hash table
